@@ -4,7 +4,6 @@ language: r
 before_install:
   # - tlmgr install scheme-full
   - tlmgr install marginnote
-  - tlmgr install pifont
   - tlmgr install listings
   - tlmgr install fancyhdr
   - tlmgr install geometry
