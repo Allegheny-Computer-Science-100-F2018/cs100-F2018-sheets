@@ -1,8 +1,13 @@
+language: r
+
 # install latex
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk
-  texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra
-  texlive-latex-recommended texlive-xetex lmodern
+  - tlmgr install scheme-full
+  - tlmgr install fontawesome
+
+# - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk
+#   texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra
+#   texlive-latex-recommended texlive-xetex lmodern
 
 # create the _build directory
 # compile the LaTeX files and save the PDF in _build
