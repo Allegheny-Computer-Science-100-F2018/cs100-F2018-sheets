@@ -4,8 +4,8 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{September 10}
-\newcommand{\assignmentassignedate}{September 3}
+\newcommand{\assignmentduedate}{September 11}
+\newcommand{\assignmentassignedate}{September 4}
 \newcommand{\assignmentnumber}{One}
 
 \newcommand{\labyear}{2018}
@@ -154,11 +154,11 @@ progress towards correctly completing the project.
 \item {\bf Use the laboratory computers}. The computers in this laboratory
   feature specialized software for completing this course's laboratory and
   practical assignments. If it is necessary for you to work on a different
-  machine, be sure to regularly transfer your work to a laboratory machine so
-  that you can check its correctness. If you cannot use a laboratory computer
-  and you need help with the configuration of your own laptop, then please
-  carefully explain its setup to a teaching assistant or the course instructor
-  when you are asking questions.
+  machine, be sure to regularly transfer your work to a laboratory machine and
+  GitHub so that you can check its correctness. If you cannot use a laboratory
+  computer and you need help with the configuration of your own laptop, then
+  please carefully explain its setup to a teaching assistant or the course
+  instructor when you are asking questions.
 
 \item {\bf Follow each step carefully}. Slowly read each sentence in the
   assignment sheet, making sure that you precisely follow each instruction.
@@ -179,7 +179,7 @@ progress towards correctly completing the project.
   repository by using \command{git status} to ensure that everything is
   updated. You can see if your assignment submission meets the established
   correctness requirements by using the provided checking tools on your local
-  computer and in checking the commits in GitHub.
+  computer and by checking the commits in GitHub.
 
 \item {\bf Keep all of your files}. Don't delete your programs, output files,
   and written reports after you submit them through GitHub; you will need them
@@ -239,7 +239,7 @@ on a central server; you don't have to use the same machine every time you log
 on in a laboratory.
 
 Hours of lab availability are posted on the bulletin board in each lab and on
-the following Web site: \url{http://www.cs.allegheny.edu/}; the on-duty lab
+the following Web site: \url{https://www.cs.allegheny.edu/}; the on-duty lab
 monitor is always available in Alden 101.
 
 \section*{Configuring Git and GitHub}
@@ -290,15 +290,15 @@ are not sure how to proceed.
     type commands.
 
   \item \marginnote{\think{Understand SSH keys}}[.05in] Now that you have
-    started the terminal, you will now need to type the \command{ssh-keygen}
-    command in it. Follow the prompts to create your keys and save them in the
-    default directory. That is, you should press ``Enter'' after you are
-    prompted to \command{Enter file in which to save the key ...  :} and then
-    type your selected passphrase whenever you are prompted to do so. Please
-    note that a ``passphrase'' is like a password that you will type when you
-    need to prove your identify to GitHub. What files does \command{ssh-keygen}
-    produce? Where does this program store these files by default? Do you have
-    any questions about how to create your SSH keys?
+    started the terminal, you will need to type the \command{ssh-keygen} command
+    in it. Follow the prompts to create your keys and save them in the default
+    directory. That is, you should press ``Enter'' after you are prompted to
+    \command{Enter file in which to save the key ...  :} and then type your
+    selected passphrase whenever you are prompted to do so. Please note that a
+    ``passphrase'' is like a password that you will type when you need to prove
+    your identify to GitHub. What files does \command{ssh-keygen} produce? Where
+    does this program store these files by default? Do you have any questions
+    about how to create your SSH keys?
 
   \item \marginnote{\caution{Upload keys correctly}}[.05in] Once you have
     created your ssh keys, you should raise your hand to invite either a
@@ -333,16 +333,16 @@ are not sure how to proceed.
 \section*{Accessing the Laboratory Assignment on GitHub}
 
 To access the laboratory assignment, you should go into the
-\channel{\#announcements} channel in our Slack team and find the announcement
-that provides a link for it. Copy this link and paste it into your web browser.
-Now, you should accept the laboratory assignment and see that GitHub Classroom
-created a new GitHub repository for you to access the assignment's starting
-materials and to store the completed version of your assignment. Specifically,
-to access your new GitHub repository for this assignment, please click the
-green ``Accept'' button and then click the link that is prefaced with the label
-``Your assignment has been created here''. If you accepted the assignment and
-correctly followed these steps, you should have created a GitHub repository
-with a name like
+\channel{\#announcements} channel in our Slack workspace and find the
+announcement that provides a link for it. Copy this link and paste it into your
+web browser. Now, you should accept the laboratory assignment and see that
+GitHub Classroom created a new GitHub repository for you to access the
+assignment's starting materials and to store the completed version of your
+assignment. Specifically, to access your new GitHub repository for this
+assignment, please click the green ``Accept'' button and then click the link
+that is prefaced with the label ``Your assignment has been created here''. If
+you accepted the assignment and correctly followed these steps, you should have
+created a GitHub repository with a name like
 ``Allegheny-Computer-Science-100-Fall-2018/computer-science-100-fall-2018-lab-1-gkapfham''.
 Unless you provide the instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
@@ -493,7 +493,7 @@ submission does not meet the requirements, a red \naughtmark{} will appear
 instead. The instructor will reduce a student's grade for this assignment if
 the red \naughtmark{} appears on the last commit in GitHub immediately before
 the assignment's due date. Yet, if the green \checkmark{} appears on the last
-commit in your GitHub repository, then you satisfied all of the main checks,
+commit in your GitHub repository, then you satisfied all of the baseline checks,
 thereby allowing the course instructor to evaluate other aspects of your source
 code and writing, as further described in the \step{Evaluation} section of this
 assignment sheet. Unless you provide the instructor with documentation of the
