@@ -2,13 +2,13 @@
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk
   texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra
-  texlive-latex-recommended texlive-xetex lmodern texlive-luatex
+  texlive-latex-recommended texlive-xetex lmodern
 
 # create the _build directory
 # compile the LaTeX files and save the PDF in _build
 script:
 - mkdir _build
-- latexmk -lualatex -pdf -outdir=_build lab01/cs100F2018_lab01.tex
+- latexmk -xelatex -pdf -outdir=_build lab01/cs100F2018_lab01.tex
 
 # securely deploy the PDFs to the specified tag on GitHub
 # GitHub's web site provides "releases" as a link near "commits"
