@@ -2,7 +2,7 @@ language: r
 
 # install latex
 before_install:
-  - tlmgr install scheme-full
+  # - tlmgr install scheme-full
   - tlmgr install marginnote
   - tlmgr install pifont
   - tlmgr install listings
