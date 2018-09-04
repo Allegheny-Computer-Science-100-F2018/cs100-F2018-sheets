@@ -1,9 +1,9 @@
+# install latex through R
 language: r
 cache: packages
 
-# install latex
+# install extra latex packages
 before_install:
-  # - tlmgr install scheme-full
   - tlmgr install marginnote
   - tlmgr install listings
   - tlmgr install fancyhdr
