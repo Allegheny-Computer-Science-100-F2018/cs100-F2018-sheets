@@ -3,6 +3,12 @@ language: r
 # install latex
 before_install:
   - tlmgr install scheme-full
+  - tlmgr install marginnote
+  - tlmgr install pifont
+  - tlmgr install listings
+  - tlmgr install fancyhdr
+  - tlmgr install geometry
+  - tlmgr install titlesec
   - tlmgr install fontawesome
 
 # - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk
