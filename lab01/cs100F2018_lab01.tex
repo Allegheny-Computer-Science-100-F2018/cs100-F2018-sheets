@@ -78,6 +78,9 @@ descriptive commit message"}}
 
 % Commands for making key margin notes, fully integrated
 
+\newcommand{\caution}[1]{\LARGE{\faWarning{}}\newline\scriptsize{\em{#1}}}
+\newcommand{\caution}[1]{\faWarning{}\newline\scriptsize{\em{#1}}}
+
 \newcommand{\caution}[1]{\null\hfill\LARGE{\faWarning{}}\newline\scriptsize{\em{#1}}}
 \newcommand{\discuss}[1]{\null\hfill\LARGE{\faCommentO{}}\newline\scriptsize{\em{#1}}}
 \newcommand{\resource}[1]{\null\hfill\LARGE{\faLink{}}\newline\scriptsize{\em{#1}}}
@@ -295,7 +298,7 @@ are not sure how to proceed.
     note that a ``passphrase'' is like a password that you will type when you
     need to prove your identify to GitHub. What files does \command{ssh-keygen}
     produce? Where does this program store these files by default? Do you have
-    any questions about completing this step?
+    any questions about how to create your SSH keys?
 
   \item \marginnote{\caution{Upload keys correctly}}[.05in] Once you have
     created your ssh keys, you should raise your hand to invite either a
@@ -312,15 +315,18 @@ are not sure how to proceed.
     you highlight any extra symbols or spaces then this step may not work
     correctly. Then, paste this into the GitHub text field in your web browser.
 
-  \item Again, when you are completing these steps, please make sure that you take careful notes about the inputs,
-    outputs, and behavior of each command. If there is something that you do not understand, then please ask the course
-    instructor or the teaching assistant about it.
+  \item Again, when you are completing these steps, please make sure that you
+    take careful notes about the inputs, outputs, and behavior of each command.
+    If there is something that you do not understand, then please ask the
+    course instructor or the teaching assistant about it.
 
-  \item Since this is your first laboratory assignment and you are still learning how to use the appropriate software,
-    don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both about
-    the necessary technology and the background and expertise of the other students in the class, the teaching
-    assistants, and the course instructor. Remember, you can use Slack to talk with the instructor by typing
-    \command{@gkapfham} in a channel.
+  \item Since this is your first laboratory assignment and you are still
+    learning how to use the appropriate software, don't become frustrated if
+    you make a mistake. Instead, use your mistakes as an opportunity for
+    learning both about the necessary technology and the background and
+    expertise of the other students in the class, the teaching assistants, and
+    the course instructor. Remember, you can use Slack to talk with the
+    instructor by typing \command{@gkapfham} in a channel.
 
 \end{enumerate}
 
