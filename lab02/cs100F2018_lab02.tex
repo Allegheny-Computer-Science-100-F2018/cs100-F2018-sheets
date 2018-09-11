@@ -313,16 +313,16 @@ are not in ``insert mode.'' To get into insert mode, just type the letter
 \command{i} (lower case). Once you do this, the window should show
 \command{--INSERT--} in the lower left corner.
 
-This laboratory assignment invites you to implement a Java program that displays
-exactly four lines of output. The first output line should display your name and
-then today's date. You can accomplish the first task by typing
-\command{System.out.println("Gregory M. Kapfhammer " + new Date());},
-substituting your name for the name of the course instructor. Your program will
-produce three additional lines of output once you add three more
-\command{System.out.println} statements. The next three lines will feature the
-output of numerical values, with the final line outputting the result of a
-computation with variables. Please see the Java source code comments for more
-details!
+\marginnote{\think{Use program variables}}[.5in] This laboratory assignment
+invites you to implement a Java program that displays exactly four lines of
+output. The first output line should display your name and then today's date.
+You can accomplish the first task by typing \command{System.out.println("Gregory
+M. Kapfhammer " + new Date());}, substituting your name for the name of the
+course instructor. Your program will produce three additional lines of output
+once you add three more \command{System.out.println} statements. The next three
+lines will feature the output of numerical values, with the final line
+outputting the result of a computation with variables. Please see the Java
+source code comments for more details!
 
 % When you are finished typing Java code in \program{gvim}, press the ESC key
 % located in the upper left corner of the keyboard. This should remove the word
@@ -332,81 +332,112 @@ details!
 % when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
 % your terminal window.
 
-If you want to \step{build} your program you can type the command \gradlebuild{} in your terminal, thereby causing the
-Java compiler to check your program for errors and get it ready to run. If you see any error messages, go back into
-\program{gvim} and try to figure out what you mis-typed and fix it. Once you have solved the problem, make a note of the
-error and the solution for resolving it. Re-save your program and then build it again by re-running the \gradlebuild{}.
-If you cannot build \mainprogram{} correctly, then please talk with a teaching assistant or the instructor.
+If you want to \step{build} your program you can type the command \gradlebuild{}
+in your terminal, thereby causing the Java compiler to check your program for
+errors and get it ready to run. If you see any error messages, go back into
+\program{gvim} and try to figure out what you mis-typed and fix it. Once you
+have solved the problem, make a note of the error and the solution for resolving
+it. Re-save your program and then build it again by re-running the
+\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
+with a teaching assistant or the instructor.
 
-When all of the errors are eliminated, you can run your program by typing \gradlerun{} in the terminal window---this is
-the ``execute'' step that will run your program and produce the designated output. You should see your name, today's
-date, and three more lines of text. Make sure there are spaces separating words in your output (did you forget to put a
-space inside the quotation marks after your last name?). If not, then repair the program and re-build and re-run it.
-Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
-should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. You can learn
-more about Markdown by viewing the aforementioned GitHub guide. To complete this aspect of the assignment, you should
-write one high-quality paragraph that reports on your experiences. Today, you should focus on building a better
-understanding of each command --- if there is one that you do not understand, please ask someone!
+\marginnote{\think{Reflect on challenges}}[.75in] When all of the errors are
+eliminated, you can run your program by typing \gradlerun{} in the terminal
+window---this is the ``execute'' step that will run your program and produce the
+designated output. You should see your name, today's date, and three more lines
+of text, as given in Figure~\ref{fig:output}. Make sure there are spaces
+separating words in your output (did you forget to put a space inside the
+quotation marks after your last name?). If not, then repair the program and
+re-build and re-run it. Once the program runs, please reflect on this process.
+What step did you find to be the most challenging? Why? You should write your
+reflections in a file, called \reflection{}, that uses the Markdown writing
+language. You can learn more about Markdown by viewing the aforementioned GitHub
+guide. To complete this aspect of the assignment, you should write one
+high-quality paragraph that reports on your experiences. You should focus on
+building a better understanding of each command --- if there is one that you do
+not understand, please ask someone!
 
-Since this is our second laboratory assignment and you are still learning how to use the appropriate hardware and
-software, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
-about the necessary technology and the background and expertise of the other students in the class, the teaching
-assistants, and the course instructor.
+Since this is our second laboratory assignment and you are still learning how to
+use the appropriate hardware and software, don't become frustrated if you make a
+mistake. Instead, use your mistakes as an opportunity for learning both about
+the necessary technology and the background and expertise of the other students
+in the class, the teaching assistants, and the course instructor.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As verified by Checkstyle tool, the source code for the \mainprogram{} file must adhere to all of the requirements in
-the Google Java Style Guide available at \url{https://google.github.io/styleguide/javaguide.html}. The Markdown file
-that contains your reflection must adhere to the standards described in the Markdown Syntax Guide
-\url{https://guides.github.com/features/mastering-markdown/}. Finally, your \reflection{} file should adhere to the
-Markdown standards established by the \step{Markdown linting} tool available at
-\url{https://github.com/markdownlint/markdownlint/} and the writing standards set by the \step{prose linting} tool from
-\url{http://proselint.com/}. Instead of requiring you to manually check that your deliverables adhere to these
-industry-accepted standards, the GatorGrader tool that you will use in this laboratory assignment makes it easy for you
-to automatically check if your submission meets the established standards for correctness. For instance, GatorGrader
-will check to ensure that \mainprogram{} produces exactly four lines of output, that you use the \command{new Date()}
-construct in the Java source code, and that you correctly compute the average distance to the moon in yards.
+As verified by Checkstyle tool, the source code for the \mainprogram{} file must
+adhere to all of the requirements in the Google Java Style Guide available at
+\url{https://google.github.io/styleguide/javaguide.html}. The Markdown file that
+contains your reflection must adhere to the standards described in the Markdown
+Syntax Guide \url{https://guides.github.com/features/mastering-markdown/}.
+Finally, your \reflection{} file should adhere to the Markdown standards
+established by the \step{Markdown linting} tool available at
+\url{https://github.com/markdownlint/markdownlint/} and the writing standards
+set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
+of requiring you to manually check that your deliverables adhere to these
+industry-accepted standards, the GatorGrader tool that you will use in this
+laboratory assignment makes it easy for you to automatically check if your
+submission meets the established standards for correctness. For instance,
+GatorGrader will check to ensure that \mainprogram{} produces exactly four lines
+of output, that you use the \command{new Date()} construct in the Java source
+code, and that you correctly compute the average distance to the moon in yards.
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
-completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
-will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
-do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
-it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
-is successful. If you notice that the network communication with GitHub did not work correctly, then please try to
-determine why, asking a teaching assistant or the instructor for assistance, if necessary.
+\marginnote{\caution{Write useful commits}}[.75in] To get started with the use
+of GatorGrader, type the command \gatorgraderstart{} in your terminal window. If
+your laboratory work does not meet all of the assignment's requirements, then
+you will see a summary of the failing checks along with a statement giving the
+percentage of checks that are currently passing. If you do have mistakes in your
+assignment, then you will need to review GatorGrader's output, find the mistake,
+and try to fix it. Once your program is building correctly, fulfilling at least
+some of the assignment's requirements, you should transfer your files to GitHub
+using the \gitcommit{} and \gitpush{} commands. For example, if you want to
+signal that the \mainprogramsource{} file has been changed and is ready for
+transfer to GitHub you would first type \gitcommitmainprogram{} in your
+terminal, followed by typing \gitpush{} and checking to see that the transfer to
+GitHub is successful. If you notice that transferring your code or writing to
+GitHub did not work correctly, then read the errors in your terminal window and
+please try to determine why, asking a teaching assistant or the course
+instructor for assistance, if necessary.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
+\marginnote{\caution{Verify all checks}}[1in] After the course instructor
+enables \step{continuous integration} with a system called Travis CI, when you
+use the \gitpush{} command to transfer your source code to your GitHub
+repository, Travis CI will initialize a \step{build} of your assignment,
+checking to see if it meets all of the requirements. If both your source code
+and writing meet all of the established requirements, then you will see a green
+\checkmark{} in the listing of commits in GitHub after awhile. If your
+submission does not meet the requirements, a red \naughtmark{} will appear
+instead. The instructor will reduce a student's grade for this assignment if the
+red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit
+in your GitHub repository, then you satisfied all of the main checks, thereby
+allowing the course instructor to evaluate other aspects of your source code and
+writing, as further described in the \step{Evaluation} section of this
+assignment sheet. Unless you provide the instructor with documentation of the
+extenuating circumstances that you are facing, no late work will be considered
 towards your grade for this laboratory assignment.
 
 \section*{Summary of the Required Deliverables}
 
-\noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
-Instead, this assignment invites you to submit, using GitHub, the following deliverables.
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables.
 
 \begin{enumerate}
 
 \setlength{\itemsep}{0in}
 
-\item Stored in \reflection{}, a one-paragraph reflection on the commands that you typed in \command{gvim} and the
-  terminal window. This Markdown-based document should explain the input, output, and behavior of each command and the
-  challenges that you confronted when using it. For every challenge that you encountered, please explain your solution
-  for it.
+\item Stored in \reflection{}, a one-paragraph reflection on the commands that
+  you typed in \command{gvim} and the terminal window. This Markdown-based
+  document should explain the input, output, and behavior of each command and
+  the challenges that you confronted when using it. For every challenge that you
+  encountered, please explain your solution for it.
 
-\item A properly documented, well-formatted, and correct version of \mainprogramsource{} that both meets all of the
-  established requirements and produces the desired output. In particular, please recall that this Java program should
-  store the result of a computation in a variable and then output that variable's value in the terminal window.
+\item A properly documented, well-formatted, and correct version of
+  \mainprogramsource{} that both meets all of the established requirements and
+  produces the desired output. In particular, please recall that this Java
+  program should store the result of a computation in a variable and then output
+  that variable's value in the terminal window.
 
 \end{enumerate}
 
@@ -421,13 +452,6 @@ both your technical writing and the comments in your source code. If your submis
 instructor will reduce your grade for the assignment while still considering the regularity with which you committed to
 your GitHub repository and the overall quality of your partially completed work. Please see the instructor if you have
 questions about the evaluation of this laboratory assignment.
-
-Please note that at the time this assignment was released, the Travis CI servers were not correctly configured for
-testing and thus you will not immediately be able to observe the \checkmark{} or \naughtmark{} in your commit listing on
-GitHub. Once this service again becomes available, you will be able to complete this step of the assignment, if you
-decide to do so. However, you can receive full credit for the assignment as long as your source code and writing pass
-the local checks run by typing \gatorgradercheck{}. Note that this will not be an issue for any past or future
-laboratory or practical assignments. Please see the instructor if you have questions about this issue.
 
 \section*{Adhering to the Honor Code}
 
