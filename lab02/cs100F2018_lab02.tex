@@ -18,6 +18,7 @@
 % Edit these commands to give the name to the main program
 
 \newcommand{\mainprogram}{\lstinline{ComputeMoonDistance}}
+\newcommand{\mainprogramjava}{\lstinline{ComputeMoonDistance.java}}
 \newcommand{\mainprogramsource}{\lstinline{src/main/java/labtwo/ComputeMoonDistance.java}}
 
 % Edit this commands to describe key deliverables
@@ -365,13 +366,14 @@ in the class, the teaching assistants, and the course instructor.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As verified by Checkstyle tool, the source code for the \mainprogram{} file must
-adhere to all of the requirements in the Google Java Style Guide available at
-\url{https://google.github.io/styleguide/javaguide.html}. The Markdown file that
-contains your reflection must adhere to the standards described in the Markdown
-Syntax Guide \url{https://guides.github.com/features/mastering-markdown/}.
-Finally, your \reflection{} file should adhere to the Markdown standards
-established by the \step{Markdown linting} tool available at
+As verified by Checkstyle tool, the source code for the \mainprogramjava{} file
+must adhere to all of the requirements in the Google Java Style Guide available
+at \url{https://google.github.io/styleguide/javaguide.html}. The Markdown file
+that contains your reflection must adhere to the standards described in the
+Markdown Syntax Guide
+\url{https://guides.github.com/features/mastering-markdown/}. Finally, your
+\reflection{} file should adhere to the Markdown standards established by the
+\step{Markdown linting} tool available at
 \url{https://github.com/markdownlint/markdownlint/} and the writing standards
 set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
 of requiring you to manually check that your deliverables adhere to these
@@ -399,14 +401,15 @@ GitHub did not work correctly, then read the errors in your terminal window and
 please try to determine why, asking a teaching assistant or the course
 instructor for assistance, if necessary.
 
-\marginnote{\caution{Verify all checks}}[1in] After the course instructor
-enables \step{continuous integration} with a system called Travis CI, when you
-use the \gitpush{} command to transfer your source code to your GitHub
-repository, Travis CI will initialize a \step{build} of your assignment,
-checking to see if it meets all of the requirements. If both your source code
-and writing meet all of the established requirements, then you will see a green
-\checkmark{} in the listing of commits in GitHub after awhile. If your
-submission does not meet the requirements, a red \naughtmark{} will appear
+% \marginnote{\caution{Verify all checks}}[1in]
+
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of your
+assignment, checking to see if it meets all of the requirements. If both your
+source code and writing meet all of the established requirements, then you will
+see a green \checkmark{} in the listing of commits in GitHub after awhile. If
+your submission does not meet the requirements, a red \naughtmark{} will appear
 instead. The instructor will reduce a student's grade for this assignment if the
 red \naughtmark{} appears on the last commit in GitHub immediately before the
 assignment's due date. Yet, if the green \checkmark{} appears on the last commit
