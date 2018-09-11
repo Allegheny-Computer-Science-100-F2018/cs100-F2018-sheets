@@ -241,16 +241,16 @@ and tutors are also available on this Web site.
 \section*{Accessing the Laboratory Assignment on GitHub}
 
 To access the laboratory assignment, you should go into the
-\channel{\#announcements} channel in our Slack team and find the announcement
-that provides a link for it. Copy this link and paste it into your web browser.
-Now, you should accept the laboratory assignment and see that GitHub Classroom
-created a new GitHub repository for you to access the assignment's starting
-materials and to store the completed version of your assignment. Specifically,
-to access your new GitHub repository for this assignment, please click the green
-``Accept'' button and then click the link that is prefaced with the label ``Your
-assignment has been created here''. If you accepted the assignment and correctly
-followed these steps, you should have created a GitHub repository with a name
-like
+\channel{\#announcements} channel in our Slack workspace and find the
+announcement that provides a link for it. Copy this link and paste it into your
+web browser. Now, you should accept the laboratory assignment and see that
+GitHub Classroom created a new GitHub repository for you to access the
+assignment's starting materials and to store the completed version of your
+assignment. Specifically, to access your new GitHub repository for this
+assignment, please click the green ``Accept'' button and then click the link
+that is prefaced with the label ``Your assignment has been created here''. If
+you accepted the assignment and correctly followed these steps, you should have
+created a GitHub repository with a name like
 ``Allegheny-Computer-Science-100-Fall-2018/computer-science-100-fall-2018-lab-2-gkapfham''.
 Unless you provide the instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
@@ -355,8 +355,21 @@ reflections in a file, called \reflection{}, that uses the Markdown writing
 language. You can learn more about Markdown by viewing the aforementioned GitHub
 guide. To complete this aspect of the assignment, you should write one
 high-quality paragraph that reports on your experiences. You should focus on
-building a better understanding of each command --- if there is one that you do
-not understand, please ask someone!
+building a better understanding of each command and code segment --- if there is
+one that you do not understand, please ask someone! For instance, can you
+explain the purpose and behavior of these statements?
+
+\vspace*{-.1in}
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+
+  \item \program{package labtwo;}
+  \item \program{import java.util.Date;}
+  \item \program{int milesToMoon = 238855;}
+  \item \program{int yardsPerMile = 1760;}
+
+\end{itemize}
+\vspace*{-.1in}
 
 Since this is our second laboratory assignment and you are still learning how to
 use the appropriate hardware and software, don't become frustrated if you make a
@@ -401,15 +414,15 @@ GitHub did not work correctly, then read the errors in your terminal window and
 please try to determine why, asking a teaching assistant or the course
 instructor for assistance, if necessary.
 
-% \marginnote{\caution{Verify all checks}}[1in]
 
-After the course instructor enables \step{continuous integration} with a system
-called Travis CI, when you use the \gitpush{} command to transfer your source
-code to your GitHub repository, Travis CI will initialize a \step{build} of your
-assignment, checking to see if it meets all of the requirements. If both your
-source code and writing meet all of the established requirements, then you will
-see a green \checkmark{} in the listing of commits in GitHub after awhile. If
-your submission does not meet the requirements, a red \naughtmark{} will appear
+\marginnote{\caution{Verify all checks}}[1in] After the course instructor
+enables \step{continuous integration} with a system called Travis CI, when you
+use the \gitpush{} command to transfer your source code to your GitHub
+repository, Travis CI will initialize a \step{build} of your assignment,
+checking to see if it meets all of the requirements. If both your source code
+and writing meet all of the established requirements, then you will see a green
+\checkmark{} in the listing of commits in GitHub after awhile. If your
+submission does not meet the requirements, a red \naughtmark{} will appear
 instead. The instructor will reduce a student's grade for this assignment if the
 red \naughtmark{} appears on the last commit in GitHub immediately before the
 assignment's due date. Yet, if the green \checkmark{} appears on the last commit
