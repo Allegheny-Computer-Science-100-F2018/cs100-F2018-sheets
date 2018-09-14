@@ -28,8 +28,8 @@
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -110,13 +110,13 @@ descriptive commit message"}}
 
 To practice using GitHub to access the files for a practical assignment.
 Additionally, to practice using the Ubuntu operating system and software
-development programs such as a ``terminal window'' and the ``GVim text
-editor''. You will also continue to practice using Slack to support
-communication with the teaching assistants and the course instructor. Next, you
-will learn how to implement and run a Java program, also discovering how to use
-the Gradle build tool and the course's automated grading tool to assess your
-progress towards correctly completing the project. Finally, you will explore
-how to perform character output and to use escaped characters.
+development programs such as a ``terminal window'' and the ``GVim text editor''.
+You will also continue to practice using Slack to support communication with the
+teaching assistants and the course instructor. Next, you will learn how to
+implement and run a Java program, also discovering how to use the Gradle build
+tool and the course's automated grading tool to assess your progress towards
+correctly completing the project. Finally, you will explore how to perform
+character output and to use escaped characters.
 
 \section*{Suggestions for Success}
 
@@ -199,7 +199,7 @@ read Chapters 1 and 2 in the course textbook, paying particularly close
 attention to Sections 1.5 and 2.1. Please see the instructor or one of the
 teaching assistants if you have questions on these reading assignments.
 
-\section*{Using Escape Characters to Display Character-Based Artwork}
+\section*{Using Escaped Characters to Display Character-Based Artwork}
 
 To access the practical assignment, you should go into the
 \channel{\#announcements} channel in our Slack team and find the announcement
@@ -218,32 +218,35 @@ circumstances that you are facing, not accepting the assignment means that you
 automatically receive a failing grade for it. Please follow the steps from the
 two previous laboratory assignments for finding your ``home base'' for this
 practical assignment; see the instructor if you are stuck on getting started.
+
 Now, study the documentation in the provided source code to understand the type
 of output that your program should produce. Note the constraints on the
 character symbols that should appear in the output and the number of possible
-{\tt println} statements you can use to produce the output.
+{\tt println} statements you can use to produce the output. That is, along with
+including the characters ``{\tt @@}'' in your output, your program should use an
+escaped character to create ten lines of output with only nine {\tt println}
+statements. If you are not sure how to create the ten output lines with only
+nine {\tt println} statements, review the textbook to learn more about the
+escaped character that causes the display of a ``newline character''.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
 As in the past assignments, you are provided with an automated tool for checking
 the quality of your source code. Please note that the practical assignments do
-not require you to produce a writing document as you do in the laboratory
-assignments. However, to check your Java source code you can started with the
-use of GatorGrader, type the command \gatorgraderstart{} in your terminal
-window. Once this step completes you can type \gatorgradercheck{}. If your work
-does not meet all of the assignment's requirements, then you will see the
-following output in your terminal: \command{Overall, are there any mistakes in
-the assignment? Yes}. If you do have mistakes in your assignment, then you will
-need to review GatorGrader's output, find the mistake, and try to fix it. Once
-your program is building correctly, fulfilling at least some of the assignment's
+not require you to create technical writing as you do in the laboratory
+assignments. However, to check your Java source code you can get started with
+the use of GatorGrader, typing the command \gatorgraderstart{} in your terminal
+window. If you do have mistakes in your assignment, then you will need to review
+GatorGrader's output, find the mistake, and try to fix it. Also, once your
+program is building correctly, fulfilling at least some of the assignment's
 requirements, you should transfer your files to GitHub using the \gitcommit{}
 and \gitpush{} commands. For example, if you want to signal that the
 \mainprogramsource{} file has been changed and is ready for transfer to GitHub
 you would first type \gitcommitmainprogram{} in your terminal, followed by
 typing \gitpush{} and checking to see that the transfer to GitHub is successful.
-If you notice that transferring your code or writing to GitHub did not work
-correctly, then please try to determine why, asking an assistant or the
-instructor for assistance, if necessary.
+If you notice that transferring your Java source code to GitHub did not work
+correctly, then please try to determine why, asking a teaching assistant or the
+course instructor for assistance, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
@@ -271,8 +274,9 @@ assignment, you are not required to complete any technical writing.
 
 \setlength{\itemsep}{0in}
 
-\item A properly documented, well-formatted, and correct version of \mainprogramsource{} that both meets all of the
-  established requirements and produces the desired output.
+\item A properly documented, well-formatted, and correct version of
+  \mainprogramsource{} that both meets all of the established requirements and
+  produces the desired output.
 
 \end{enumerate}
 
@@ -287,11 +291,14 @@ completing the project.
 
 \section*{Adhering to the Honor Code}
 
-In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
-for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
-carefully between the student who discusses the principles underlying a problem with others and the student who produces
-assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., Java source code or
-Markdown-based technical writing) that are nearly identical to the work of others will be taken as evidence of violating
-the \mbox{Honor Code}. Please see the course instructor if you have questions about this policy.
+In adherence to the Honor Code, students should complete this assignment on an
+individual basis. While it is appropriate for students in this class to have
+high-level conversations about the assignment, it is necessary to distinguish
+carefully between the student who discusses the principles underlying a problem
+with others and the student who produces assignments that are identical to, or
+merely variations on, someone else's work. Deliverables (e.g., Java source code)
+that are nearly identical to the work of others will be taken as evidence of
+violating the \mbox{Honor Code}. Please see the course instructor during office
+hours if you have questions about this policy.
 
 \end{document}
