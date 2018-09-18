@@ -426,9 +426,9 @@ established by the \step{Markdown linting} tool available at
 \url{https://github.com/markdownlint/markdownlint/} and the writing standards
 set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
 of requiring you to manually check that your deliverables adhere to these
-industry-accepted standards, the GatorGrader tool that you will use in this
-laboratory assignment makes it easy for you to automatically check if your
-submission meets the standards for correctness.
+industry-accepted standards, the GatorGrader and Gradle tools that you will use
+in this laboratory assignment makes it easy for you to automatically check if
+your submission meets the standards for correctness.
 
 Since this is not your first laboratory assignment, you will notice that the
 provided source code does not contain all of the required comments at the top of
@@ -436,27 +436,44 @@ the Java source code file. This means that you will have to inspect the source
 code from previous laboratory and practical assignments to review how to create
 the comments in the \mainprogramsource{} file. Moreover, the provided source
 code is missing many of the lines that are needed to pass the GatorGrader
-checks. For instance, GatorGrader will check to ensure that \mainprogram{}
+checks. For instance, GatorGrader will check to ensure that the \mainprogram{}
 produces exactly ten lines of output, that you use the \command{new Date()}
 construct in the Java source code, and that the program correctly produces the
 same output as seen on the previous page.
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{}
-in your terminal window. Once this step completes you can type
-\gatorgradercheck{}. If your work does not meet all of the assignment's
-requirements, then you will see the following output in your terminal:
-\command{Overall, are there any mistakes in the assignment? Yes}. If you do have
-mistakes in your assignment, then you will need to review GatorGrader's output,
-find the mistake, and try to fix it. Once your program is building correctly,
-fulfilling at least some of the assignment's requirements, you should transfer
-your files to GitHub using the \gitcommit{} and \gitpush{} commands. For
-example, if you want to signal that the \mainprogramsource{} file has been
-changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{}, and
-then checking to see that the transfer to GitHub is successful. If you notice
-that the network communication with GitHub did not work correctly, then please
-try to determine why, asking a teaching assistant or the instructor for
-assistance, if necessary.
+\marginnote{\caution{Write useful commits}}[.75in] To get started with the use
+of GatorGrader, type the command \gatorgraderstart{} in your terminal window. If
+your laboratory work does not meet all of the assignment's requirements, then
+you will see a summary of the failing checks along with a statement giving the
+percentage of checks that are currently passing. If you do have mistakes in your
+assignment, then you will need to review GatorGrader's output, find the mistake,
+and try to fix it. Once your program is building correctly, fulfilling at least
+some of the assignment's requirements, you should transfer your files to GitHub
+using the \gitcommit{} and \gitpush{} commands. For example, if you want to
+signal that the \mainprogramsource{} file has been changed and is ready for
+transfer to GitHub you would first type \gitcommitmainprogram{} in your
+terminal, followed by typing \gitpush{} and checking to see that the transfer to
+GitHub is successful. If you notice that transferring your code or writing to
+GitHub did not work correctly, then read the errors in your terminal window and
+please try to determine why, asking a teaching assistant or the course
+instructor for assistance, if necessary.
+
+% To get started with the use of GatorGrader, type the command \gatorgraderstart{}
+% in your terminal window. Once this step completes you can type
+% \gatorgradercheck{}. If your work does not meet all of the assignment's
+% requirements, then you will see the following output in your terminal:
+% \command{Overall, are there any mistakes in the assignment? Yes}. If you do have
+% mistakes in your assignment, then you will need to review GatorGrader's output,
+% find the mistake, and try to fix it. Once your program is building correctly,
+% fulfilling at least some of the assignment's requirements, you should transfer
+% your files to GitHub using the \gitcommit{} and \gitpush{} commands. For
+% example, if you want to signal that the \mainprogramsource{} file has been
+% changed and is ready for transfer to GitHub you would first type
+% \gitcommitmainprogram{} in your terminal, followed by typing \gitpush{}, and
+% then checking to see that the transfer to GitHub is successful. If you notice
+% that the network communication with GitHub did not work correctly, then please
+% try to determine why, asking a teaching assistant or the instructor for
+% assistance, if necessary.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
@@ -475,34 +492,41 @@ assignment sheet. Unless you provide the instructor with documentation of the
 extenuating circumstances that you are facing, no late work will be considered
 towards your grade for this laboratory assignment.
 
-In conclusion, here are some points to remember as you complete this laboratory assignment:
+In conclusion, here are some points to remember as you complete this laboratory
+assignment:
 
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-\item The provided source code uses the {\tt Scanner} class; notice that it is imported at the top of the program. You
-  may refer to the textbook for code demonstrating the use of the {\tt Scanner}; you need to use methods that support
-  the input for variables of type {\tt String}, {\tt int}, and {\tt double}. Picking the wrong data types for your
-  variables may cause the program to crash or to produce incorrect output. See the instructor or an assistant if you are
-  not sure what types to use.
+\item The provided source code uses the {\tt Scanner} class; notice that it is
+  imported at the top of the program. You may refer to the textbook for code
+  demonstrating the use of the {\tt Scanner}; you need to use methods that
+  support the input for variables of type {\tt String}, {\tt int}, and {\tt
+  double}. Picking the wrong data types for your variables may cause the program
+  to crash or to produce incorrect output. See the instructor or an assistant if
+  you are not sure what types to use.
 
-\item Students who want to learn more about how to use the {\tt Scanner} class can refer to pages 90 and 91 of the
-  textbook, focusing on the {\tt GasMileage} class provided in Listing 2.9.
+\item Students who want to learn more about how to use the {\tt Scanner} class
+  can refer to Section 2.6 of the textbook, focusing on the {\tt GasMileage}
+  class provided in Listing 2.9.
 
-\item You should think carefully about what data type you want to use for your variables.
+\item You should think carefully about what data type you want to use for your
+  variables.
 
-\item As in past assignments, your program only needs to have one {\tt main} method.
+\item As in past assignments, your program only needs to have one {\tt main}
+  method.
 
-\item To display a dollar sign, you can just type ``\$'' inside the string of your output statement.
+\item To display a dollar sign, you can just type ``\$'' inside the string of
+  your output statement.
 
-\item Note that your program will alternate between printing and computing---this
-is okay!
+\item Note that your program will alternate between printing and
+  computing---this is okay!
 
-\item Don't forget to review the assignment sheets from the previous laboratory and practical assignments as they
-  contain insights that will support your completion of this assignment.
+\item Don't forget to review the assignment sheets from the previous laboratory
+  and practical assignments as they contain insights that will support your
+  completion of this assignment.
 
 \end{enumerate}
-
 
 \section*{Summary of the Required Deliverables}
 
