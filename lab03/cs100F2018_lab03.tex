@@ -58,9 +58,30 @@ descriptive commit message"}}
 \newcommand{\option}[1]{``{#1}''}
 \newcommand{\step}[1]{``{#1}''}
 
+% Enable margin notes to catch student attention
+
+\usepackage{marginnote}
+\reversemarginpar
+\renewcommand*{\raggedrightmarginnote}{\centering}
+
+% Load extra fonts
+
 \usepackage{pifont}
 \newcommand{\checkmark}{\ding{51}}
 \newcommand{\naughtmark}{\ding{55}}
+\usepackage{fontawesome}
+
+% Commands for margin notes, for optional use
+
+\newcommand{\book}{\faBook}
+\newcommand{\group}{\faUsers}
+
+% Commands for making key margin notes, fully integrated
+
+\newcommand{\caution}[1]{\null\hfill\LARGE{\faWarning{}}\newline\scriptsize{\em{#1}}}
+\newcommand{\discuss}[1]{\null\hfill\LARGE{\faCommentO{}}\newline\scriptsize{\em{#1}}}
+\newcommand{\resource}[1]{\null\hfill\LARGE{\faLink{}}\newline\scriptsize{\em{#1}}}
+\newcommand{\think}[1]{\null\hfill\LARGE{\faCogs{}}\newline\scriptsize{\em{#1}}}
 
 \usepackage{listings}
 \lstset{
@@ -244,33 +265,36 @@ discoveries with a neighbor and a \mbox{teaching assistant}.
 
 \section*{Reading from a File and Computing with Variables}
 
-% In order view the source code of a Java program or a Markdown-based writing assignment, you need a text editor. There
-% are many different text editors on your workstation and you should feel free to explore these on your own. Since it is a
-% powerful text editor known for helping computer scientists ``edit text at the speed of thought'', in this class we will
-% normally use the text editor called \command{gvim}.
+% In order view the source code of a Java program or a Markdown-based writing
+% assignment, you need a text editor. There are many different text editors on
+% your workstation and you should feel free to explore these on your own. Since
+% it is a powerful text editor known for helping computer scientists ``edit text
+% at the speed of thought'', in this class we will normally use the text editor
+% called \command{gvim}.
 
-Today, you will view and improve another Java program in {\tt gvim}! To load the
-source code of today's Java program into \program{gvim}, you should type
-\command{gvim src/main/java/labthree/TipCalculator.java} in your terminal
-window. This should cause a new window, the \program{gvim} text editor, to
-appear on your screen. Since \program{gvim} is a modal editor, you may notice
-that if you start typing, nothing appears (unless you happen to hit certain
-letters such as \command{i}, \command{o}, \command{a}, and a few others). This
-is because you are not in ``insert mode.'' To get into insert mode, just type
-the letter \command{i} (lower case). Once you do this, the window should show
-\command{--INSERT--} in the lower left corner.
+\marginnote{\think{Explore text editor}}[.5in] Today, you will view and
+improve another Java program in {\tt gvim}! To load the source code of today's
+Java program into \program{gvim}, you should type \command{gvim
+src/main/java/labthree/TipCalculator.java} in your terminal window. This should
+cause a new window, the \program{gvim} text editor, to appear on your screen.
+Since \program{gvim} is a modal editor, you may notice that if you start typing,
+nothing appears (unless you happen to hit certain letters such as \command{i},
+\command{o}, \command{a}, and a few others). This is because you are not in
+``insert mode.'' To get into insert mode, just type the letter \command{i}
+(lower case). Once you do this, the window should show \command{--INSERT--} in
+the lower left corner.
 
-This assignment invites you to implement a Java program that displays exactly
-ten lines of output. The first output line should display your name and then
-today's date. You can accomplish the first task by typing
-\command{System.out.println("Gregory M. Kapfhammer " + new Date());},
-substituting your name for the name of the course instructor. Your program will
-produce nine additional lines of output once you add eight more
-\command{System.out.println} statements. Unlike your previous Java programs,
-this Java program must read input values from a file and then use these inputs
-to perform computations and to produce outputs. Please see the Java source code
-comments for more details! The remainder of this section summarizes the purpose
-of this program for tip calculation.
+\marginnote{\think{Research file input}}[.5in] This assignment invites you to
+implement a Java program that displays exactly ten lines of output. The first
+output line should display your name and then today's date. You can accomplish
+the first task by typing \command{System.out.println("Gregory M. Kapfhammer " +
+new Date());}, substituting your name for the name of the course instructor.
+Your program will produce nine additional lines of output once you add eight
+more \command{System.out.println} statements. Unlike your previous Java
+programs, this Java program must read input values from a file and then use
+these inputs to perform computations and to produce outputs. Please see the Java
+source code comments for more details! The remainder of this section summarizes
+the purpose of this program for tip calculation.
 
 This assignment asks you to write a Java program, \mainprogramsource{}, that
 will calculate the tip, the total bill for the user, and each person's share of
@@ -348,45 +372,57 @@ example. Additionally, you should try to edit the \mainprograminput{} file so
 that it provides different inputs to the program. Does your \mainprogram{} still
 produce the expected output?
 
-Whenever you are finished typing text Java code in \program{gvim}, press the ESC
-key located in the upper left corner of the keyboard. This should remove the
-word \command{--INSERT--} from the bottom of the screen and take you out of
-insert mode. Use the \option{File/Save} menu to save your program.
-Alternatively, if you would like to use the keyboard to save your file, you can
-press \command{:w} when you are not in insert mode. Leaving the {\tt gvim}
-window open, go back to your terminal window.
+% Whenever you are finished typing Java code in \program{gvim}, press the ESC key
+% located in the upper left corner of the keyboard. This should remove the word
+% \command{--INSERT--} from the bottom of the screen and take you out of insert
+% mode. Use the \option{File/Save} menu to save your program. Alternatively, if
+% you would like to use the keyboard to save your file, you can press \command{:w}
+% when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
+% your terminal window.
 
-If you want to \step{build} your program you can type the command \gradlebuild{}
-in your terminal, thereby causing the Java compiler to check your program for
-errors and get it ready to run. If you get any error messages, go back into
-\program{gvim} and try to figure out what you mis-typed and fix it. Once you
-have solved the problem, make a note of the error and the solution for resolving
-it. Re-save your program and then build it again by re-running the
-\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
-with a teaching assistant or the instructor.
+\marginnote{\discuss{Discuss input code}}[.35in] Remember, if you want to
+\step{build} your program you can type the command \gradlebuild{} in your
+terminal, thereby causing the Java compiler to check your program for errors and
+get it ready to run. If you get any error messages, go back into \program{gvim}
+and try to figure out what you mis-typed and fix it. Once you have solved the
+problem, make a note of the error and the solution for resolving it. Re-save
+your program and then build it again by re-running the \gradlebuild{}. If you
+cannot build \mainprogram{} correctly, then please talk with a teaching
+assistant or the instructor. Finally, please make sure that you discuss the
+provided source code, including the following fragment.
 
-When all of the errors are eliminated, you can run your program by typing
-\gradlerun{} in the terminal window---this is the ``execute'' step that will run
-your program and produce the designated output. You should see your name,
-today's date, and nine more lines of text. Make sure there are spaces separating
-words in your output (did you forget to put a space inside the quotation marks
-after your last name?). If not, then repair the program and re-build and re-run
-it. Once the program runs, please reflect on this process. What step did you
-find to be the most challenging? Why? You should write your reflections in a
-file, called \reflection{}, that uses the Markdown writing language. To complete
-this aspect of the assignment, you should write one high-quality paragraph that
-reports on your experiences with the various commands and Java code segments.
+\begin{verbatim}
+    try {
+      tipInputsFile = new File("input/tip_inputs.txt");
+      scanner = new Scanner(tipInputsFile);
+    } catch (FileNotFoundException noFile) {
+      System.out.println("Unable to locate file");
+    }
+\end{verbatim}
+
+\marginnote{\think{Reflect on challenges}}[.7in] When all program errors are
+eliminated, you can run your program by typing \gradlerun{} in the
+terminal---this is the ``execute'' step that will run your program and produce
+the designated output. You should see your name, today's date, and nine more
+lines of text. Make sure there are spaces separating words in your output (did
+you forget to put a space inside the quotation marks after your last name?). If
+not, then repair the program and re-build and re-run it. Once the program runs,
+please reflect on this process. What step did you find to be the most
+challenging? Why? You should write your reflections in a file, called
+\reflection{}, that uses the Markdown writing language. To complete this aspect
+of the assignment, you should write one high-quality paragraph that reports on
+your experiences with the various commands and Java code segments.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As verified by the Checkstyle tool, the source code for the \mainprogram{} file
-must adhere to all of the requirements in the Google Java Style Guide available
-at \url{https://google.github.io/styleguide/javaguide.html}. The Markdown file
-that contains your reflection must adhere to the standards described in the
-Markdown Syntax Guide
-\url{https://guides.github.com/features/mastering-markdown/}. Finally, your
-\reflection{} file should adhere to the Markdown standards established by the
-\step{Markdown linting} tool available at
+\marginnote{\resource{Study style guides}}[.75in] As verified by the Checkstyle
+tool, the source code for the \mainprogram{} file must adhere to all of the
+requirements in the Google Java Style Guide available at
+\url{https://google.github.io/styleguide/javaguide.html}. The Markdown file that
+contains your reflection must adhere to the standards described in the Markdown
+Syntax Guide \url{https://guides.github.com/features/mastering-markdown/}.
+Finally, your \reflection{} file should adhere to the Markdown standards
+established by the \step{Markdown linting} tool available at
 \url{https://github.com/markdownlint/markdownlint/} and the writing standards
 set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
 of requiring you to manually check that your deliverables adhere to these
