@@ -20,6 +20,7 @@ script:
 - latexmk -xelatex -pdf -outdir=_build lab02/cs100F2018_lab02.tex
 - latexmk -xelatex -pdf -outdir=_build lab03/cs100F2018_lab03.tex
 - latexmk -xelatex -pdf -outdir=_build practical01/cs100F2018_practical01.tex
+- latexmk -xelatex -pdf -outdir=_build practical02/cs100F2018_practical02.tex
 
 # securely deploy the PDFs to the specified tag on GitHub
 # GitHub's web site provides "releases" as a link near "commits"
@@ -32,6 +33,7 @@ deploy:
     - _build/cs100F2018_lab02.pdf
     - _build/cs100F2018_lab03.pdf
     - _build/cs100F2018_practical01.pdf
+    - _build/cs100F2018_practical02.pdf
   skip_cleanup: true
   on:
     tags: true
