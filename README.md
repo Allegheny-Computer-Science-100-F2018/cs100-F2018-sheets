@@ -1,11 +1,11 @@
 # cs100-F2018-sheets
 
 This repository contains all of the assignment sheets for Computer Science 100
-Fall 2017. Each directory in this repository contains the LaTeX source code for
+Fall 2018. Each directory in this repository contains the LaTeX source code for
 a assignment designed for use with [GitHub
 Classroom](https://classroom.github.com/). To learn more about the course in
 which these assignments were completed, please visit the [Computer Science 100
-Fall 2017 GitHub
+Fall 2018 GitHub
 Organization](https://github.com/Allegheny-Computer-Science-100-F2018). All of
 the LaTeX files in this repository are automatically compiled with [Travis
 CI](https://travis-ci.org/), thus ensuring that they compile correctly and,
