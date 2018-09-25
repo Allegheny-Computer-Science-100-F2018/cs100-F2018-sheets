@@ -256,33 +256,73 @@ code for this assignment. For instance, if the course instructor ran the
   git clone git@github.com:Allegheny-Computer-Science-100-F2018/computer-science-100-fall-2018-lab-4-gkapfham.git
 \end{lstlisting}
 
-\marginnote{\discuss{Discuss provide code}}[.225in] After this command finishes,
-you can use \command{cd} to change into the new directory. If you want to
-\step{go back} one directory from your current location, then you can type the
-command \command{cd ..}. Please continue to use the \command{cd} and
+\marginnote{\discuss{Discuss graphics code}}[.225in] After this command
+finishes, you can use \command{cd} to change into the new directory. If you want
+to \step{go back} one directory from your current location, then you can type
+the command \command{cd ..}. Please continue to use the \command{cd} and
 \command{ls} commands to explore the files that you automatically downloaded
 from GitHub. What files and directories do you see? What do you think is their
 purpose? Spend some time exploring, sharing your discoveries with a neighbor and
-a \mbox{teaching assistant}.
+a \mbox{teaching assistant}. Now, try to answer the following questions, based
+on Chapter 3, about how to create graphics with JavaFX.
+
+\begin{enumerate}
+
+  \item Can you draw a picture of the coordinate system used by JavaFX?
+
+  \item How do you locate a point on the coordinate system used by JavaFX?
+
+  \item How do you declare and display a line that runs from the point $(10,
+    20)$ to the point $(300, 80)$?
+
+  \item How do you declare and display a $200 \times 70$ rectangle that has
+    a upper-left corner at $(30, 50)$?
+
+  \item In JavaFX, what are the similarities and differences between a circle
+    and an ellipse?
+
+  \item How do you declare and display a circle with radius $40$ and a center
+    point at $(100, 150)$?
+
+  \item Using the JavaFX framework, how do you declare and display an ellipse
+    with a center point at $(100, 50)$, a horizontal radius of $80$, and
+    vertical radius of $30$?
+
+  \item How do you group together, and place on a scene, different JavaFX shapes
+    (e.g., a \program{Circle})?
+
+  \item How do you define the color of a single graphical object like a
+    \program{Circle} or an \program{Ellipse}?
+
+  \item How do you set the title of your graphical display and then cause it to
+    appear on the screen?
+
+\end{enumerate}
 
 \section*{Creating Sophisticated Graphical Output}
 
-In order view the source code of a Java program or a Markdown-based writing assignment, you need a text editor. There
-are many different text editors on your workstation and you should feel free to explore these on your own. Since it is a
-powerful text editor known for helping computer scientists ``edit text at the speed of thought'', in this class we will
-normally use the text editor called \command{gvim}. Today, you will view and improve another Java program in {\tt gvim}!
-To load the source code of today's Java program into \program{gvim}, you should type \command{gvim
-src/main/java/labfour/DisplayGraphicalScene.java} in your terminal window. This should cause a new window, the \program{gvim}
-text editor, to appear on your screen. Since \program{gvim} is a modal editor, you may notice that if you start typing,
-nothing appears (unless you happen to hit certain letters such as \command{i}, \command{o}, \command{a}, and a few
-others). This is because you are not in ``insert mode.'' To get into insert mode, just type the letter \command{i}
-(lower case). Once you do this, the window should show \command{--INSERT--} in the lower left corner.
+In order view the source code of a Java program or a Markdown-based writing
+assignment, you need a text editor. There are many different text editors on
+your workstation and you should feel free to explore these on your own. Since it
+is a powerful text editor known for helping computer scientists ``edit text at
+the speed of thought'', in this class some students may opt to use the text
+editor called \command{gvim}. Today, you will view and improve another Java
+program in {\tt gvim}! To load the source code of today's Java program into
+\program{gvim}, you should type \command{gvim
+src/main/java/labfour/DisplayGraphicalScene.java} in your terminal window. This
+should cause a new window, the \program{gvim} text editor, to appear on your
+screen. Since \program{gvim} is a modal editor, you may notice that if you start
+typing, nothing appears (unless you happen to hit certain letters such as
+\command{i}, \command{o}, \command{a}, and a few others). This is because you
+are not in ``insert mode.'' To get into insert mode, just type the letter
+\command{i} (lower case). Once you do this, the window should show
+\command{--INSERT--} in the lower left corner.
 
-This assignment invites you to implement desktop wallpaper art similar to the examples that are found on the web site
-called \url{http://simpledesktops.com/}. First, your Java program should display your name and then the date on which
-the program was run. You can accomplish this task with \command{JFrame window = new JFrame("Gregory M. Kapfhammer " +
-new Date());}, substituting your name for the name of the instructor. Please see the Java source code comments for more
-details about the program's purpose! The remainder of this section summarizes the goals for \mbox{this program}.
+This assignment invites you to implement desktop wallpaper art similar to the
+examples that are found on the web site called \url{http://simpledesktops.com/}.
+Please see the Java source code comments for more details about the program's
+purpose! The remainder of this section summarizes the goals for \mbox{this
+program}.
 
 First, this assignment asks you to write a program, \mainprogramsource{}, that will display a canvas for a graphical
 scene. In particular, it must do the following:
@@ -297,44 +337,35 @@ scene. In particular, it must do the following:
 
 \end{enumerate}
 
-\vspace*{-.1in}
-Second, this assignment invites you to write another program, called \secondprogramsource{}, that will paint a graphical
-scene on an already displayed canvas.
+Whenever you are finished typing text Java code in \program{gvim}, press the ESC
+key located in the upper left corner of the keyboard. This should remove the
+word \command{--INSERT--} from the bottom of the screen and take you out of
+insert mode. Use the \option{File/Save} menu to save your program.
+Alternatively, if you would like to use the keyboard to save your file, you can
+press \command{:w} when you are not in insert mode. Leaving the {\tt gvim}
+window open, go back to your terminal window.
 
-\vspace*{-.1in}
-\begin{enumerate}
-  \setlength{\itemsep}{0pt}
+If you want to \step{build} your program you can type the command \gradlebuild{}
+in your terminal, thereby causing the Java compiler to check your program for
+errors and get it ready to run. If you get any error messages, go back into
+\program{gvim} and try to figure out what you mis-typed and fix it. Once you
+have solved the problem, make a note of the error and the solution for resolving
+it. Re-save your program and then build it again by re-running the
+\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
+with a teaching assistant or the instructor.
 
-\item Contain at least four single-line comments and two multi-line comments.
-\item Declare and use the \command{CANVAS_HEIGHT} variable.
-\item Declare and use the \command{CANVAS_WIDTH} variable.
-\item Create at least five colors using the \command{page.setColor} method call.
-\item Create at least three rectangles using the \command{fillRect} method call.
-\item Create at least five ovals using the \command{fillOval} method call.
-\item Declare and use at least two \command{int} variable when creating and displaying graphics.
-
-\end{enumerate}
-
-Whenever you are finished typing text Java code in \program{gvim}, press the ESC key located in the upper left corner of
-the keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
-mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like to use the keyboard to save
-your file, you can press \command{:w} when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
-your terminal window.
-
-If you want to \step{build} your program you can type the command \gradlebuild{} in your terminal, thereby causing the
-Java compiler to check your program for errors and get it ready to run. If you get any error messages, go back into
-\program{gvim} and try to figure out what you mis-typed and fix it. Once you have solved the problem, make a note of the
-error and the solution for resolving it. Re-save your program and then build it again by re-running the \gradlebuild{}.
-If you cannot build \mainprogram{} correctly, then please talk with a teaching assistant or the instructor.
-
-When all of the errors are eliminated, you can run your program by typing \gradlerun{} in the terminal window---this is
-the ``execute'' step that will run your program and produce the designated output. You should see your name, today's
-date, and the graphical output. Make sure there are spaces separating words in your output (did you forget to put a
-space inside the quotation marks after your last name?). If not, then repair the program and re-build and re-run it.
-Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
-should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. To complete this
-aspect of the assignment, you should write one high-quality paragraph that reports on your experiences with the various
-commands and Java code segments.
+\marginnote{\think{Reflect on challenges}}[.4in] When all of the errors are
+eliminated, you can run your program by typing \gradlerun{} in the terminal
+window---this is the ``execute'' step that will run your program and produce the
+designated output. You should see your name, today's date, and the graphical
+output. Make sure there are spaces separating words in your output (did you
+forget to put a space inside the quotation marks after your last name?). If not,
+then repair the program and re-build and re-run it. Once the program runs,
+please reflect on this process. What step did you find to be the most
+challenging? Why? You should write your reflections in a file, called
+\reflection{}, that uses the Markdown writing language. To complete this aspect
+of the assignment, you should write one high-quality paragraph that reports on
+your experiences with the various commands and Java code segments.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
