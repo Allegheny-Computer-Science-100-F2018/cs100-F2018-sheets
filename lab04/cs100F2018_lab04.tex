@@ -268,6 +268,8 @@ on Chapter 3, about how to create graphics with JavaFX.
 
 \begin{enumerate}
 
+  \setlength{\itemsep}{0pt}
+
   \item Can you draw a picture of the coordinate system used by JavaFX?
 
   \item How do you locate a point on the coordinate system used by JavaFX?
@@ -288,7 +290,7 @@ on Chapter 3, about how to create graphics with JavaFX.
     with a center point at $(100, 50)$, a horizontal radius of $80$, and
     vertical radius of $30$?
 
-  \item How do you group together, and place on a scene, different JavaFX shapes
+  \item How do you group together (and place on a scene) different JavaFX shapes
     (e.g., a \program{Circle})?
 
   \item How do you define the color of a single graphical object like a
@@ -309,31 +311,25 @@ the speed of thought'', in this class some students may opt to use the text
 editor called \command{gvim}. Today, you will view and improve another Java
 program in {\tt gvim}! To load the source code of today's Java program into
 \program{gvim}, you should type \command{gvim
-src/main/java/labfour/DisplayGraphicalScene.java} in your terminal window. This
-should cause a new window, the \program{gvim} text editor, to appear on your
-screen. Since \program{gvim} is a modal editor, you may notice that if you start
-typing, nothing appears (unless you happen to hit certain letters such as
-\command{i}, \command{o}, \command{a}, and a few others). This is because you
-are not in ``insert mode.'' To get into insert mode, just type the letter
-\command{i} (lower case). Once you do this, the window should show
-\command{--INSERT--} in the lower left corner.
+src/main/java/labfour/DisplayGraphicalScene.java} in your terminal window.
+Students may also take a similar step to view and edit the Java source code with
+the Atom text editor.
 
 This assignment invites you to implement desktop wallpaper art similar to the
 examples that are found on the web site called \url{http://simpledesktops.com/}.
 Please see the Java source code comments for more details about the program's
 purpose! The remainder of this section summarizes the goals for \mbox{this
-program}.
-
-First, this assignment asks you to write a program, \mainprogramsource{}, that will display a canvas for a graphical
-scene. In particular, it must do the following:
+program}. This assignment asks you to write a program, \mainprogramsource{},
+that will display a canvas containing a graphical scene. For instance, it must
+meet these requirements (see the README in your GitHub repository for more
+details):
 
 \vspace*{-.1in}
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-\item Contain at least four single-line comments and two multi-line comments.
-\item Declare and use the \command{CANVAS_HEIGHT} variable.
-\item Declare and use the \command{CANVAS_WIDTH} variable.
+  \item Declare and use the \command{CANVAS_HEIGHT} variable.
+  \item Declare and use the \command{CANVAS_WIDTH} variable.
 
 \end{enumerate}
 
@@ -354,7 +350,7 @@ it. Re-save your program and then build it again by re-running the
 \gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
 with a teaching assistant or the instructor.
 
-\marginnote{\think{Reflect on challenges}}[.4in] When all of the errors are
+\marginnote{\think{Reflect on challenges}}[.5in] When all of the errors are
 eliminated, you can run your program by typing \gradlerun{} in the terminal
 window---this is the ``execute'' step that will run your program and produce the
 designated output. You should see your name, today's date, and the graphical
@@ -379,96 +375,140 @@ linting} tool from \url{http://proselint.com/}. Instead of requiring you to manu
 to these industry-accepted standards, the GatorGrader tool that you will use in this laboratory assignment makes it easy
 for you to automatically check if your submission meets these well-established standards for correctness.
 
-Since this is not your first laboratory assignment, you will notice that the provided source code does not contain all of
-the required comments at the top of the Java source code file. This means that you will have to inspect the source code
-from previous laboratory and practical assignments to review how to create the comments in the \mainprogramsource{} and
-\secondprogramsource{} files. Moreover, the provided source code is missing many of the lines that are needed to pass
-the GatorGrader checks. Please review the requirements for these two Java source code files, as outlined in the previous
-section. You should also study the source code of these files to learn more about what you need to add to them.
+Since this is not your first laboratory assignment, you will notice that the
+provided source code does not contain all of the required comments in Java
+source code file. This means that you will have to inspect the source code from
+previous laboratory and practical assignments to review how to add comments to
+the \mainprogramsource{}. Moreover, the provided source code is missing many of
+the lines that are needed to pass the GatorGrader checks. Please review the
+requirements for this Java source code file, as outlined in the previous
+section. You should also study the code in this file to learn more about what
+you need to add to it. Please don't forget to remove a \program{TODO} marker
+from the code after you have fully resolve it!
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
-completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
-will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
-do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
-it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{}, and then checking to see that the transfer to
-GitHub is successful. Remember, to correctly complete this assignment you need to commit all code and writing files to
-GitHub. If you notice that the network communication with GitHub did not work, then please try to determine why, asking
-a teaching assistant or the instructor for assistance.
+\marginnote{\caution{Write useful commits}}[.75in] To get started with the use
+of GatorGrader, type the command \gatorgraderstart{} in your terminal window. If
+your laboratory work does not meet all of the assignment's requirements, then
+you will see a summary of the failing checks along with a statement giving the
+percentage of checks that are currently passing. If you do have mistakes in your
+assignment, then you will need to review GatorGrader's output, find the mistake,
+and try to fix it. Once your program is building correctly, fulfilling at least
+some of the assignment's requirements, you should transfer your files to GitHub
+using the \gitcommit{} and \gitpush{} commands. For example, if you want to
+signal that the \mainprogramsource{} file has been changed and is ready for
+transfer to GitHub you would first type \gitcommitmainprogram{} in your
+terminal, followed by typing \gitpush{} and then checking to see that the
+transfer to your GitHub repository is successful.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
-towards your grade for this laboratory assignment. In conclusion, here are some points to remember for creating programs
-that display graphical output:
+% To get started with the use of GatorGrader, type the command \gatorgraderstart{}
+% in your terminal window. Once this step completes you can type
+% \gatorgradercheck{}. If your work does not meet all of the assignment's
+% requirements, then you will see the following output in your terminal:
+% \command{Overall, are there any mistakes in the assignment? Yes}. If you do have
+% mistakes in your assignment, then you will need to review GatorGrader's output,
+% find the mistake, and try to fix it. Once your program is building correctly,
+% fulfilling at least some of the assignment's requirements, you should transfer
+% your files to GitHub using the \gitcommit{} and \gitpush{} commands. For
+% example, if you want to signal that the \mainprogramsource{} file has been
+% changed and is ready for transfer to GitHub you would first type
+% \gitcommitmainprogram{} in your terminal, followed by typing \gitpush{}, and
+% then checking to see that the transfer to GitHub is successful. Remember, to
+% correctly complete this assignment you need to commit all code and writing files
+% to GitHub. If you notice that the network communication with GitHub did not
+% work, then please try to determine why, asking a teaching assistant or the
+% instructor for assistance.
+
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of your
+assignment, checking to see if it meets all of the requirements. If both your
+source code and writing meet all of the established requirements, then you will
+see a green \checkmark{} in the listing of commits in GitHub after awhile. If
+your submission does not meet the requirements, a red \naughtmark{} will appear
+instead. The instructor will reduce a student's grade for this assignment if the
+red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit
+in your GitHub repository, then you satisfied all of the main checks, thereby
+allowing the course instructor to evaluate other aspects of your source code and
+writing, as further described in the \step{Evaluation} section of this
+assignment sheet. Unless you provide the instructor with documentation of the
+extenuating circumstances that you are facing, no late work will be considered
+towards your grade for this laboratory assignment. In conclusion, here are some
+points to remember for creating programs that display graphical output:
 
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-\item You should think carefully about how your graphics can be displayed using variables.
+\item You should think carefully about how your graphics can be displayed using
+  variables.
 
-\item As in past assignments, your program only needs to have one {\tt main} method in one file.
+\item As in past assignments, your program only needs to have one {\tt main}
+  method in one file.
 
-\item See Figure 2.10 for a listing of some common \command{Color} variables for use in your program.
+\item See Figure 3.14 for a listing of some common \command{Color} variables for
+  use in your program.
 
-\item Your program will alternate between creating and displaying graphical output---this is okay!
+\item Your program must use the \program{setTitle} method to give the required
+  title to the graphic display.
 
-\item Don't forget to review the assignment sheets from the previous laboratory and practical assignments as they
-  contain insights that will support your completion of this assignment.
+\item Don't forget to review the assignment sheets from the previous laboratory
+  and practical assignments as they contain insights that will support your
+  completion of this assignment.
 
 \end{enumerate}
 
-
 \section*{Summary of the Required Deliverables}
 
-\noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
-Instead, this assignment invites you to submit, using GitHub, the following deliverables.
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables.
 
 \begin{enumerate}
 
   \setlength{\itemsep}{0in}
 
-\item Stored in \reflection{}, a one-paragraph reflection on the commands that you typed in \command{gvim} and the
-  terminal window. This Markdown-based document should explain the input, output, and behavior of each command and the
-  challenges that you confronted when using it. For every challenge that you encountered, please explain your solution
-  for it.
+\item Stored in \reflection{}, a one-paragraph reflection on the commands that
+  you typed in \command{gvim} and the terminal window. This Markdown-based
+  document should explain the input, output, and behavior of each command and
+  the challenges that you confronted when using it. For every challenge that you
+  encountered, please explain your solution for it.
 
-\item A complete and correct version of \mainprogramsource{} that both meets all of the established requirements and
-  produces the desired output.
+\item A complete and correct version of \mainprogramsource{} that both meets all
+  of the established requirements and produces the desired output.
 
-\item A complete and correct version of \secondprogramsource{} that both meets all of the established requirements and
-  produces the desired output.
+\item A complete and correct version of \secondprogramsource{} that both meets
+  all of the established requirements and produces the desired output.
 
 \end{enumerate}
 
 \section*{Evaluation of Your Laboratory Assignment}
 
-Using a report that the instructor shares with you through the commit log in GitHub, you will privately received a grade
-on this assignment and feedback on your submitted deliverables. Your grade for the assignment will be a function of the
-whether or not it was submitted in a timely fashion and if your program received a green \checkmark{} indicating that it
-met all of the requirements. Other factors will also influence your final grade on the assignment. In addition to
-studying the efficiency and effectiveness of your Java source code, the instructor will also evaluate the accuracy of
-both your technical writing and the comments in your source code. If your submission receives a red \naughtmark{}, the
-instructor will reduce your grade for the assignment while still considering the regularity with which you committed to
-your GitHub repository and the overall quality of your partially completed work. Please see the instructor if you have
-questions about the evaluation of this laboratory assignment.
+Using a report that the instructor shares with you through the commit log in
+GitHub, you will privately received a grade on this assignment and feedback on
+your submitted deliverables. Your grade for the assignment will be a function of
+the whether or not it was submitted in a timely fashion and if your program
+received a green \checkmark{} indicating that it met all of the requirements.
+Other factors will also influence your final grade on the assignment. In
+addition to studying the efficiency and effectiveness of your Java source code,
+the instructor will also evaluate the accuracy of both your technical writing
+and the comments in your source code. If your submission receives a red
+\naughtmark{}, the instructor will reduce your grade for the assignment while
+still considering the regularity with which you committed to your GitHub
+repository and the overall quality of your partially completed work. Please see
+the instructor if you have questions about the evaluation of this laboratory
+assignment.
 
 % \section*{Adhering to the Honor Code}
 
-% In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
-% for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
-% carefully between the student who discusses the principles underlying a problem with others and the student who produces
-% assignments that are identical to, or merely variations on, someone else's work. Deliverables (e.g., Java source code or
-% Markdown-based technical writing) that are nearly identical to the work of others will be taken as evidence of violating
-% the \mbox{Honor Code}. Please see the course instructor if you have questions about this policy.
+% In adherence to the Honor Code, students should complete this assignment on an
+% individual basis. While it is appropriate for students in this class to have
+% high-level conversations about the assignment, it is necessary to distinguish
+% carefully between the student who discusses the principles underlying a
+% problem with others and the student who produces assignments that are
+% identical to, or merely variations on, someone else's work. Deliverables
+% (e.g., Java source code or Markdown-based technical writing) that are nearly
+% identical to the work of others will be taken as evidence of violating the
+% \mbox{Honor Code}. Please see the course instructor if you have questions
+% about this policy.
 
 \end{document}
