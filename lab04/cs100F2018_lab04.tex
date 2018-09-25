@@ -301,7 +301,7 @@ on Chapter 3, about how to create graphics with JavaFX.
 
 \end{enumerate}
 
-\section*{Creating Sophisticated Graphical Output}
+\section*{Displaying Sophisticated Graphical Output}
 
 In order view the source code of a Java program or a Markdown-based writing
 assignment, you need a text editor. There are many different text editors on
@@ -311,9 +311,9 @@ the speed of thought'', in this class some students may opt to use the text
 editor called \command{gvim}. Today, you will view and improve another Java
 program in {\tt gvim}! To load the source code of today's Java program into
 \program{gvim}, you should type \command{gvim
-src/main/java/labfour/DisplayGraphicalScene.java} in your terminal window.
-Students may also take a similar step to view and edit the Java source code with
-the Atom text editor.
+src/main/java/labfour/DisplayGraphicalScene.java} in your terminal window. As an
+alternative to using \command{gvim}, students may also take similar steps to
+view and edit the Java source code with the Atom text editor.
 
 This assignment invites you to implement desktop wallpaper art similar to the
 examples that are found on the web site called \url{http://simpledesktops.com/}.
@@ -328,40 +328,58 @@ details):
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-  \item Declare and use the \command{CANVAS_HEIGHT} variable.
-  \item Declare and use the \command{CANVAS_WIDTH} variable.
+  \item Declare and use the constant variable called \command{CANVAS_HEIGHT}.
+
+  \item Declare and use the constant variable called \command{CANVAS_WIDTH}.
+
+  \item Declare and display at least five instances of the \program{Circle} class.
+
+  \item Declare and display at least three instance of the \program{Line} class.
+
+  \item Declare and display at least three instances of the \program{Rectangle}
+    class.
+
+  \item Declare and display at least two instances of the \program{Line} class.
+
+  \item Display a graphics window containing the label ``\program{A
+    Sophisticated Graphical Scene}''.
+
+  \item Display a non-random, fully organized graphical scene suitable for a
+    classroom setting.
 
 \end{enumerate}
 
-Whenever you are finished typing text Java code in \program{gvim}, press the ESC
-key located in the upper left corner of the keyboard. This should remove the
-word \command{--INSERT--} from the bottom of the screen and take you out of
-insert mode. Use the \option{File/Save} menu to save your program.
-Alternatively, if you would like to use the keyboard to save your file, you can
-press \command{:w} when you are not in insert mode. Leaving the {\tt gvim}
-window open, go back to your terminal window.
+% Whenever you are finished typing text Java code in \program{gvim}, press the ESC
+% key located in the upper left corner of the keyboard. This should remove the
+% word \command{--INSERT--} from the bottom of the screen and take you out of
+% insert mode. Use the \option{File/Save} menu to save your program.
+% Alternatively, if you would like to use the keyboard to save your file, you can
+% press \command{:w} when you are not in insert mode. Leaving the {\tt gvim}
+% window open, go back to your terminal window.
 
 If you want to \step{build} your program you can type the command \gradlebuild{}
 in your terminal, thereby causing the Java compiler to check your program for
-errors and get it ready to run. If you get any error messages, go back into
-\program{gvim} and try to figure out what you mis-typed and fix it. Once you
-have solved the problem, make a note of the error and the solution for resolving
-it. Re-save your program and then build it again by re-running the
-\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
-with a teaching assistant or the instructor.
+errors and get it ready to run. If you get any error messages, go back into your
+text editor and try to figure out what you mis-typed and fix it. Once you have
+solved the problem, make a note of the error and the solution for resolving it.
+Re-save your program and then build it again by re-running the \gradlebuild{}.
+If you cannot build \mainprogram{} correctly, then please talk with the course
+instructor. Remember, you can produce any type of graphical display as long as
+it meets the assignment's requirements.
 
 \marginnote{\think{Reflect on challenges}}[.5in] When all of the errors are
 eliminated, you can run your program by typing \gradlerun{} in the terminal
 window---this is the ``execute'' step that will run your program and produce the
-designated output. You should see your name, today's date, and the graphical
-output. Make sure there are spaces separating words in your output (did you
-forget to put a space inside the quotation marks after your last name?). If not,
-then repair the program and re-build and re-run it. Once the program runs,
-please reflect on this process. What step did you find to be the most
-challenging? Why? You should write your reflections in a file, called
-\reflection{}, that uses the Markdown writing language. To complete this aspect
-of the assignment, you should write one high-quality paragraph that reports on
-your experiences with the various commands and Java code segments.
+designated output. You should see no terminal output and instead notice the
+graphical display. Make sure that all aspects of the graphics (e.g., their
+position, size, and color) display correctly. If they do not, then repair the
+program and re-build and re-run it. Once the
+program runs and produces the intended output, please reflect on this process.
+What step did you find to be the most challenging? Why? You should write your
+reflections in a file, called \reflection{}, that uses the Markdown writing
+language. To complete this aspect of the assignment, you should write one
+high-quality paragraph that reports on your experiences with the various
+commands and Java code segments.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
@@ -445,11 +463,20 @@ points to remember for creating programs that display graphical output:
 \item As in past assignments, your program only needs to have one {\tt main}
   method in one file.
 
+\item See Figure 3.12 for an illustrative example of the hierarchy for the
+  display of graphical objects.
+
 \item See Figure 3.14 for a listing of some common \command{Color} variables for
   use in your program.
 
+\item If necessary, follow the book's instructions to use the RGB encoding to
+  create your own \program{Color}.
+
 \item Your program must use the \program{setTitle} method to give the required
   title to the graphic display.
+
+\item Your final program should not contain any \program{TODO} markers as these
+  are only for unfinished tasks.
 
 \item Don't forget to review the assignment sheets from the previous laboratory
   and practical assignments as they contain insights that will support your
@@ -474,10 +501,7 @@ to submit, using GitHub, the following deliverables.
   encountered, please explain your solution for it.
 
 \item A complete and correct version of \mainprogramsource{} that both meets all
-  of the established requirements and produces the desired output.
-
-\item A complete and correct version of \secondprogramsource{} that both meets
-  all of the established requirements and produces the desired output.
+  of the established requirements and produces the desired graphical output.
 
 \end{enumerate}
 
