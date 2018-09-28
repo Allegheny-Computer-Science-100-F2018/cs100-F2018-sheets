@@ -118,8 +118,8 @@ editor''. You will continue to practice using Slack to support communication
 with the teaching assistants and the course instructor. Next, you will learn
 more about computer graphics, further discovering how the course's automated
 grading tool assesses your progress towards correctly completing the project.
-Finally, you will continue to learn more about color values, variables, and data
-types and the ways in which they are combined.
+Finally, you will continue to learn more about RGB color values, variables, and
+data types and the ways in which they are combined.
 
 \section*{Suggestions for Success}
 
@@ -240,19 +240,19 @@ that you can view in the {\tt gimp} program. So, what is the RGB value of the
 color red's complement? Does it appear on the opposite side of the color wheel?
 
 As a means of practicing the use of variables and expressions, and the creation
-of graphics in Java, you should make some small additions to this program so
+of graphics in Java, you should make some additions to this program's code so
 that it fulfills its intended purpose. To accomplish this task, the first thing
 that you must do is find all of the segments of code that have a \program{TODO}
 marker associated with them. For instance, you will need to construct a
 \program{Rectangle} that will be filled with the user's chosen color and take up
 exactly half of the canvas. You will also need to make another instance of the
-\program{Rectangle} class that takes up the other half of the screen and is
+\program{Rectangle} class that takes up the other half of the canvas and is
 filled with the complement of the user's color. In part, this means that you
-will have to write in the form of a Java expression the simple equations that
-were intuitively explained in the previous paragraph. As you implement this
-source code, make sure that the expression you implement correctly reference the
-already declared variables such as \program{RGB_MAXIMUM} and
-\program{VERTICAL_ORIGIN}. But, before you start these tasks make sure that you
+will have to write, in the form of a Java expression, the ``complement''
+equations that were intuitively explained in the previous paragraph. As you
+implement this code, make sure that each expression that you implement correctly
+references the declared variables such as \program{RGB_MAXIMUM} and
+\program{VERTICAL_ORIGIN}. But, before you start these tasks, make sure that you
 understand the purpose of this line:
 
 \begin{verbatim}
@@ -271,12 +271,12 @@ understand the purpose of this line:
 % the image. Please see the instructor or a teaching assistant if you have
 % questions about these steps.
 
-After finishing the \mainprogramsource{} file, you should repeatedly test you
+After finishing the \mainprogramsource{} file, you should repeatedly test your
 program to make sure that it is creating the correct graphical output. For
 instance, if the user inputs (through the file) the RGB value of $(255, 0, 0)$,
 then what are the colors in the left and right sides of the graphic? To test
 your program, you may want to try several different RGB values that are listed
-in your textbook or through the \command{showrgb} command. Remember, your
+in your textbook or given by the \command{showrgb} command. Remember, your
 program will receive a new color specification only when you change the values
 in the file called \program{input/color_values.txt}. More advanced testing of
 your program is possible by picking an RGB value from one side of the color
