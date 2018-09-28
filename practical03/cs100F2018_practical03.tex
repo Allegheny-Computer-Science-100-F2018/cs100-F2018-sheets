@@ -242,28 +242,48 @@ color red's complement? Does it appear on the opposite side of the color wheel?
 As a means of practicing the use of variables and expressions, and the creation
 of graphics in Java, you should make some small additions to this program so
 that it fulfills its intended purpose. To accomplish this task, the first thing
-that you must do is add a call to the {\tt page.fillRect} method so that it
-paints a rectangle of the color requested by the user. Next, you should store in
-the variable called {\tt userComplementaryColor} a color that is the complement
-of the one requested by the user. This means that you will have to write in the
-form of a Java expression the simple equations that were intuitively explained
-in the previous paragraph. Now, the source code line ``{\tt
-page.setColor(userComplementaryColor);}'' will cause the next shape to be filled
-with the complement of the color chosen by the user. Finally, you will need to
-again call the {\tt page.fillRect} method with the parameters that will yield a
-rectangle correctly drawn in the second half of the image. Please see the
-instructor or a teaching assistant if you have questions about these steps.
+that you must do is find all of the segments of code that have a \program{TODO}
+marker associated with them. For instance, you will need to construct a
+\program{Rectangle} that will be filled with the user's chosen color and take up
+exactly half of the canvas. You will also need to make another instance of the
+\program{Rectangle} class that takes up the other half of the screen and is
+filled with the complement of the user's color. In part, this means that you
+will have to write in the form of a Java expression the simple equations that
+were intuitively explained in the previous paragraph. As you implement this
+source code, make sure that the expression you implement correctly reference the
+already declared variables such as \program{RGB_MAXIMUM} and
+\program{VERTICAL_ORIGIN}. But, before you start these tasks make sure that you
+understand the purpose of this line:
 
-After finishing the \mainprogramsource{} and \secondprogramsource{} files, you
-should repeatedly test you program to make sure that it is creating the correct
-graphical output. For instance, if the user inputs through a file the RGB value
-of $(255, 0, 0)$, then what are the colors in the left and right sides of the
-graphic? To test your program, you may want to try several different RGB values
-that are listed in Figure 2.10 of your textbook. More advanced testing of your
-program is possible by picking an RGB value from one side of the color wheel in
-{\tt gimp} and then checking that your program correctly displays its complement
-(the one ``across'' the color wheel) in the graphic. Does your testing reveal
-any limitations to our approach to calculating the complementary color?
+\begin{verbatim}
+    Color userRequestedColor = Color.rgb(redValue, greenValue, blueValue);
+\end{verbatim}
+
+% add a call to the {\tt page.fillRect} method so that it
+% paints a rectangle of the color requested by the user. Next, you should store in
+% the variable called {\tt userComplementaryColor} a color that is the complement
+% of the one requested by the user.
+
+% Now, the source code line ``{\tt page.setColor(userComplementaryColor);}'' will
+% cause the next shape to be filled with the complement of the color chosen by the
+% user. Finally, you will need to again call the {\tt page.fillRect} method with
+% the parameters that will yield a rectangle correctly drawn in the second half of
+% the image. Please see the instructor or a teaching assistant if you have
+% questions about these steps.
+
+After finishing the \mainprogramsource{} file, you should repeatedly test you
+program to make sure that it is creating the correct graphical output. For
+instance, if the user inputs (through the file) the RGB value of $(255, 0, 0)$,
+then what are the colors in the left and right sides of the graphic? To test
+your program, you may want to try several different RGB values that are listed
+in your textbook or through the \command{showrgb} command. Remember, your
+program will receive a new color specification only when you change the values
+in the file called \program{input/color_values.txt}. More advanced testing of
+your program is possible by picking an RGB value from one side of the color
+wheel in {\tt gimp} and then checking that your program correctly displays its
+complement (the one ``across'' the color wheel) in the graphic. Does your
+testing reveal any limitations to this approach to calculating the complementary
+color?
 
 Students who are interested in an additional challenge can investigate other
 ways to calculate complementary colors. Another option for enterprising students
@@ -286,13 +306,17 @@ need to review GatorGrader's output, find the mistake, and try to fix it.
 Remember, this practical assignment provides you with Java source code that
 purposefully contains mistakes --- your task is to find and fix these problems!
 
-Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should transfer
-your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that the
-\mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and checking to see that the transfer to GitHub
-is successful. Of course, you will also need to use \command{git} commands in your terminal to transfer the
-\secondprogramsource{} to GitHub. If you notice that transferring your code to GitHub did not work correctly, then
-please try to determine why, asking a teaching assistant or the course instructor for help, if necessary.
+Once your program is building correctly, fulfilling at least some of the
+assignment's requirements, you should transfer your files to GitHub using the
+\gitcommit{} and \gitpush{} commands. For example, if you want to signal that
+the \mainprogramsource{} file has been changed and is ready for transfer to
+GitHub you would first type \gitcommitmainprogram{} in your terminal, followed
+by typing \gitpush{} and checking to see that the transfer to GitHub is
+successful. Of course, you will also need to use \command{git} commands in your
+terminal to transfer the \secondprogramsource{} to GitHub. If you notice that
+transferring your code to GitHub did not work correctly, then please try to
+determine why, asking a teaching assistant or the course instructor for help, if
+necessary.
 
 After the course instructor enables \step{continuous integration} with a system
 called Travis CI, when you use the \gitpush{} command to transfer your source
@@ -313,28 +337,34 @@ instructor if you do not understand this policy.
 
 \section*{Additional Success Strategies for the Practical Sessions}
 
-Since this is one of our first practical assignments and you are still learning how to use the Java programming
-language, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
-about the necessary technology and the background and expertise of the other students in the class, the teaching
-assistants, and the course instructor.
+Since this is one of our first practical assignments and you are still learning
+how to use the Java programming language, don't become frustrated if you make a
+mistake. Instead, use your mistakes as an opportunity for learning both about
+the necessary technology and the background and expertise of the other students
+in the class, the teaching assistants, and the course instructor.
 
 \vspace*{-.05in}
 \begin{itemize}
 
 \itemsep 0in
 
-\item {\bf Experiment.} Practical sessions are for learning by doing without the pressure of grades or ``right/wrong''
-  answers. So try things! To learn about computer graphics, please intelligently experiment with the code, making small
+\item {\bf Experiment.} Practical sessions are for learning by doing without the
+  pressure of grades or ``right/wrong'' answers. So try things! To learn about
+  computer graphics, please intelligently experiment with the code, making small
   incremental changes and observing the output.
 
-\item {\bf Practice Key Laboratory Skills.} As you are completing this assignment, practice using the {\tt gvim} text
-  editor and the terminal until you can easily use their most important features.
+\item {\bf Practice Key Laboratory Skills.} As you are completing this
+  assignment, practice using the {\tt gvim} text editor and the terminal until
+  you can easily use their most important features.
 
-\item {\bf Help One Another!} If your neighbor is struggling and you know what to do, offer your help. Don't ``do the
-  work'' for them, but advise them on what to type or how to handle things. If you are stuck on a part of this practical
-  assignment and you could not find any insights in either your textbook or online sources, formulate a question to ask
-  your neighbor, a teaching assistant, or a course instructor. Try to strike the right balance between asking for help
-  when you cannot solve a problem and working independently to find a solution.
+\item {\bf Help One Another!} If your neighbor is struggling and you know what
+  to do, offer your help. Don't ``do the work'' for them, but advise them on
+  what to type or how to handle things. If you are stuck on a part of this
+  practical assignment and you could not find any insights in either your
+  textbook or online sources, formulate a question to ask your neighbor, a
+  teaching assistant, or a course instructor. Try to strike the right balance
+  between asking for help when you cannot solve a problem and working
+  independently to find a solution.
 
 \end{itemize}
 
@@ -349,8 +379,8 @@ assignment, you are not required to complete any technical writing.
 
 \setlength{\itemsep}{0in}
 
-\item A correct version of \mainprogramsource{} and \secondprogramsource{} that meets all of the established source code
-  requirements and produces the desired graphical output.
+\item A correct version of \mainprogramsource{} that meets all of the
+  established source code requirements and produces the desired graphics.
 
 \end{enumerate}
 
