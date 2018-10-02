@@ -327,6 +327,7 @@ requirements:
 \item Run correctly without crashing or producing an error
 
 \end{enumerate}
+\vspace*{-.1in}
 
 % Whenever you are finished typing text Java code in \program{gvim}, press the ESC
 % key located in the upper left corner of the keyboard. This should remove the
@@ -343,7 +344,21 @@ errors and get it ready to run. If you get any error messages, go back into
 have solved the problem, make a note of the error and the solution for resolving
 it. Re-save your program and then build it again by re-running the
 \gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
-with a teaching assistant or the instructor.
+with a teaching assistant or the instructor. Before you go on to the next step
+of the assignment you should also ensure that you understand how \mainprogram{}
+uses the following source code segment to support the reading of values from an
+input file.
+
+\vspace*{-.1in}
+\begin{verbatim}
+    try {
+      wordInputsFile = new File("input/wordhide_inputs.txt");
+      scanner = new Scanner(wordInputsFile);
+    } catch (FileNotFoundException noFile) {
+      System.out.println("Unable to locate file");
+    }
+\end{verbatim}
+\vspace*{-.1in}
 
 When all of the errors are eliminated, you can run your program by typing
 \gradlerun{} in the terminal window---this is the ``execute'' step that will run
