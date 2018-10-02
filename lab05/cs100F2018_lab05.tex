@@ -57,6 +57,20 @@ descriptive commit message"}}
 \newcommand{\option}[1]{``{#1}''}
 \newcommand{\step}[1]{``{#1}''}
 
+% Enable margin notes to catch student attention
+
+\usepackage{marginnote}
+\reversemarginpar
+\renewcommand*{\raggedrightmarginnote}{\centering}
+
+% Commands for making key margin notes, fully integrated
+
+\usepackage{fontawesome}
+\newcommand{\caution}[1]{\null\hfill\LARGE{\faWarning{}}\newline\scriptsize{\em{#1}}}
+\newcommand{\discuss}[1]{\null\hfill\LARGE{\faCommentO{}}\newline\scriptsize{\em{#1}}}
+\newcommand{\resource}[1]{\null\hfill\LARGE{\faLink{}}\newline\scriptsize{\em{#1}}}
+\newcommand{\think}[1]{\null\hfill\LARGE{\faCogs{}}\newline\scriptsize{\em{#1}}}
+
 \usepackage{pifont}
 \newcommand{\checkmark}{\ding{51}}
 \newcommand{\naughtmark}{\ding{55}}
