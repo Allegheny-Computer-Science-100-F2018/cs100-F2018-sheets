@@ -232,19 +232,20 @@ Unless you provide the instructor with documentation of the extenuating
 circumstances that you are facing, not accepting the assignment means that you
 automatically receive a failing grade for it.
 
-Before you move to the next step of this assignment, please make sure that you
-read all of the content on the web site for your new GitHub repository, paying
-close attention to the technical details about the commands that you will type
-and the output that your program must produce. Now you are ready to download the
-starting materials to your laboratory computer. Click the ``Clone or download''
-button and, after ensuring that you have selected ``Clone with SSH'', please
-copy this command to your clipboard. To enter into the right directory you
-should now type \command{cd cs100F2018}. Next, you can type the command
-\command{ls} and see that there are some files or directories inside of this
-directory. By typing \command{git clone} in your terminal and then pasting in
-the string that you copied from the GitHub site you will download all of the
-code for this assignment. For instance, if the course instructor ran the
-\command{git clone} command in the terminal, it would look like:
+\marginnote{\caution{Clone GitHub repository}}[.75in] Before you move to the
+next step of this assignment, please make sure that you read all of the content
+on the web site for your new GitHub repository, paying close attention to the
+technical details about the commands that you will type and the output that your
+program must produce. Now you are ready to download the starting materials to
+your laboratory computer. Click the ``Clone or download'' button and, after
+ensuring that you have selected ``Clone with SSH'', please copy this command to
+your clipboard. To enter into the right directory you should now type
+\command{cd cs100F2018}. Next, you can type the command \command{ls} and see
+that there are some files or directories inside of this directory. By typing
+\command{git clone} in your terminal and then pasting in the string that you
+copied from the GitHub site you will download all of the code for this
+assignment. For instance, if the course instructor ran the \command{git clone}
+command in the terminal, it would look like:
 
 \begin{lstlisting}
   git clone git@github.com:Allegheny-Computer-Science-100-F2018/computer-science-100-fall-2018-lab-5-gkapfham.git
@@ -258,12 +259,13 @@ automatically downloaded from GitHub. What files and directories do you see?
 What do you think is their purpose? Spend some time exploring, sharing your
 discoveries with a neighbor and a \mbox{teaching assistant}.
 
-\subsection*{Implementing and Evaluating a Steganography Program}
+\section*{Implementing and Evaluating a Steganography Program}
 
-Within the field of computer security, there are many sub-fields that develop strategies for sending, receiving, and
-storing secret messages. Involving the hiding of a secret ``in plain sight'', steganography is one way in which you can
-create and send a secret message. For this laboratory assignment, you will implement a program, called {\tt
-WordHide.java}, that will perform these operations:
+Within the field of computer security, there are many sub-fields that develop
+strategies for sending, receiving, and storing secret messages. Involving the
+hiding of a secret ``in plain sight'', steganography is one way in which you can
+create and send a secret message. For this assignment, you will implement a
+program, called {\tt WordHide.java}, that will perform these operations:
 
 \vspace*{-.1in}
 
@@ -271,31 +273,41 @@ WordHide.java}, that will perform these operations:
 
   \itemsep0in
 
-  \item Prompt the user for a word that is exactly ten characters in length. For now, {\tt WordHide} should allow the
-    user to enter any type of ``padding character'' before or after a word that is less than ten characters. If the word
-    is longer than ten characters, then your program should simply discard all of the characters after the tenth one
-    (you may also implement better strategies).
+  \item Prompt the user for a word that is exactly ten characters in length. For
+    now, {\tt WordHide} should allow the user to enter any type of ``padding
+    character'' before or after a word that is less than ten characters. If the
+    word is longer than ten characters, then your program should simply discard
+    all of the characters after the tenth one (you may also implement better
+    strategies).
 
-  \item Since the {\tt WordHide} program must output all of its character in a capitalized form, you should transform the
-    word provided by the user so that it only contains upper-case letters.
+  \item Since the {\tt WordHide} program must output all of its character in a
+    capitalized form, you should transform the word provided by the user so that
+    it only contains upper-case letters.
 
-  \item Finally, {\tt WordHide} should output a $20 \times 20$ ``grid'' of letters that contain the user's word
-    ``hidden'' inside of it. All of the letters in this grid should be capitalized. You should brainstorm and prototype
-    different techniques for effectively hiding the user's word in the grid of letters. As you implement your program,
-    you must make decisions about the following matters: (i) what letters will you add to the grid to best hide the
-    user's word? (ii) where and how will you place the user's word in the grid? (iii) what features of the Java
-    programming language will you use to ensure the grid is formatted properly in the terminal window? As you answer
-    these questions and finish the implementation and testing of {\tt WordHide.java}, it may help to consider the fact
-    that the user's word might be better hidden if the grid contains both some randomly chosen letters and some letters
-    found in the user's input. You should devote a considerable amount of time to brainstorming, prototyping, and
-    evaluating (e.g., by asking a friend to try your program) different ways in which you can effectively hide words.
+  \item Finally, {\tt WordHide} should output a $20 \times 20$ ``grid'' of
+    letters that contain the user's word ``hidden'' inside of it. All of the
+    letters in this grid should be capitalized. You should brainstorm and
+    prototype different techniques for effectively hiding the user's word in the
+    grid of letters. As you implement your program, you must make decisions
+    about the following matters: (i) what letters will you add to the grid to
+    best hide the user's word? (ii) where and how will you place the user's word
+    in the grid? (iii) what features of the Java programming language will you
+    use to ensure the grid is formatted properly in the terminal window? As you
+    answer these questions and finish the implementation and testing of {\tt
+    WordHide.java}, it may help to consider the fact that the user's word might
+    be better hidden if the grid contains both some randomly chosen letters and
+    some letters found in the user's input. You should devote a considerable
+    amount of time to brainstorming, prototyping, and evaluating (e.g., by
+    asking a friend to try your program) different ways in which you can
+    effectively hide words.
 
 \end{enumerate}
 
 \vspace*{-.1in}
 
-In summary, this assignment asks you to write a program, \mainprogramsource{}, that will complete a word-hiding task. In
-particular, it must meet the following requirements:
+In summary, this assignment asks you to write a program, \mainprogramsource{},
+that will complete a word-hiding task. For instance, it must meet the following
+requirements:
 
 \vspace*{-.1in}
 \begin{enumerate}
@@ -305,95 +317,134 @@ particular, it must meet the following requirements:
 \item Include calls to at least 12 \command{println} statements.
 \item Include at least one call to the \command{substring} and \command{charAt} methods.
 \item Declare at least 20 \command{String} variables for the lines of output.
-\item Produce a total of 26 lines of output.
+\item Produce a total of 24 lines of non-blank output.
 \item Display the contiguous word hidden in a $20 \times 20$ grid.
 \item Separate the three blocks of output with a blank horizontal line.
+\item Robustly handle a variety of ``tricky'' inputs (e.g., symbols, numbers,
+  and spaces).
+\item Strategically hide the word in a fashion that is difficult for a human
+  to detect.
+\item Run correctly without crashing or producing an error
 
 \end{enumerate}
 
-Whenever you are finished typing text Java code in \program{gvim}, press the ESC key located in the upper left corner of
-the keyboard. This should remove the word \command{--INSERT--} from the bottom of the screen and take you out of insert
-mode. Use the \option{File/Save} menu to save your program. Alternatively, if you would like to use the keyboard to save
-your file, you can press \command{:w} when you are not in insert mode. Leaving the {\tt gvim} window open, go back to
-your terminal window.
+% Whenever you are finished typing text Java code in \program{gvim}, press the ESC
+% key located in the upper left corner of the keyboard. This should remove the
+% word \command{--INSERT--} from the bottom of the screen and take you out of
+% insert mode. Use the \option{File/Save} menu to save your program.
+% Alternatively, if you would like to use the keyboard to save your file, you can
+% press \command{:w} when you are not in insert mode. Leaving the {\tt gvim}
+% window open, go back to your terminal window.
 
-If you want to \step{build} your program you can type the command \gradlebuild{} in your terminal, thereby causing the
-Java compiler to check your program for errors and get it ready to run. If you get any error messages, go back into
-\program{gvim} and try to figure out what you mis-typed and fix it. Once you have solved the problem, make a note of the
-error and the solution for resolving it. Re-save your program and then build it again by re-running the \gradlebuild{}.
-If you cannot build \mainprogram{} correctly, then please talk with a teaching assistant or the instructor.
+If you want to \step{build} your program you can type the command \gradlebuild{}
+in your terminal, thereby causing the Java compiler to check your program for
+errors and get it ready to run. If you get any error messages, go back into
+\program{gvim} and try to figure out what you mis-typed and fix it. Once you
+have solved the problem, make a note of the error and the solution for resolving
+it. Re-save your program and then build it again by re-running the
+\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
+with a teaching assistant or the instructor.
 
-When all of the errors are eliminated, you can run your program by typing \gradlerun{} in the terminal window---this is
-the ``execute'' step that will run your program and produce the designated output. You should see your name, today's
-date, and the graphical output. Make sure there are spaces separating words in your output (did you forget to put a
-space inside the quotation marks after your last name?). If not, then repair the program and re-build and re-run it.
-Once the program runs, please reflect on this process. What step did you find to be the most challenging? Why? You
-should write your reflections in a file, called \reflection{}, that uses the Markdown writing language. To complete this
-aspect of the assignment, you should write one high-quality paragraph that reports on your experiences with the various
-commands and Java code segments. You should also write a paragraph that describes your strategy for hiding the word in
-the grid.
+When all of the errors are eliminated, you can run your program by typing
+\gradlerun{} in the terminal window---this is the ``execute'' step that will run
+your program and produce the designated output. You should see your name,
+today's date, and the graphical output. Make sure there are spaces separating
+words in your output (did you forget to put a space inside the quotation marks
+after your last name?). If not, then repair the program and re-build and re-run
+it. Once the program runs, please reflect on this process. What step did you
+find to be the most challenging? Why? You should write your reflections in a
+file, called \reflection{}, that uses the Markdown writing language. To complete
+this aspect of the assignment, you should write one high-quality paragraph that
+reports on your experiences with the various commands and Java code segments.
+You should also write a paragraph that describes your strategy for hiding the
+word in the grid.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As verified by Checkstyle, the code for the \mainprogramsource{} file must adhere to all of the requirements in the
-Google Java Style Guide available at \url{https://google.github.io/styleguide/javaguide.html}. The Markdown file that
-contains your reflection must adhere to the standards described in the Markdown Syntax Guide
-\url{https://guides.github.com/features/mastering-markdown/}. Finally, your \reflection{} file should adhere to the
-Markdown standards established by the \step{Markdown linting} tool available at
-\url{https://github.com/markdownlint/markdownlint/} and the writing standards set by the \step{prose linting} tool from
-\url{http://proselint.com/}. Instead of requiring you to manually check that your deliverables adhere to these
-industry-accepted standards, the GatorGrader tool that you will use in this laboratory assignment makes it easy for you
-to automatically check if your submission meets these well-established standards for correctness. Please see the
-instructor if you have questions about GatorGrader.
+As verified by Checkstyle, the code for the \mainprogramsource{} file must
+adhere to all of the requirements in the Google Java Style Guide available at
+\url{https://google.github.io/styleguide/javaguide.html}. The Markdown file that
+contains your reflection must adhere to the standards described in the Markdown
+Syntax Guide \url{https://guides.github.com/features/mastering-markdown/}.
+Finally, your \reflection{} file should adhere to the Markdown standards
+established by the \step{Markdown linting} tool available at
+\url{https://github.com/markdownlint/markdownlint/} and the writing standards
+set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
+of requiring you to manually check that your deliverables adhere to these
+industry-accepted standards, the GatorGrader tool that you will use in this
+laboratory assignment makes it easy for you to automatically check if your
+submission meets these well-established standards for correctness. Please see
+the instructor if you have questions about GatorGrader.
 
-Since this is not your first laboratory assignment, you will notice that the provided source code does not contain all of
-the required comments at the top of the Java source code file. This means that you will have to inspect the source code
-from previous laboratory and practical assignments to review how to create the comments in the \mainprogramsource{}
-file. Moreover, the provided source code is missing many of the lines that are needed to pass the GatorGrader checks.
-Review the requirements for this Java source code file, as outlined in the previous section. You should also study the
-source code of this file to learn more about what you need to add to it.
+Since this is not your first laboratory assignment, you will notice that the
+provided source code does not contain all of the required comments at the top of
+the Java source code file. This means that you will have to inspect the source
+code from previous laboratory and practical assignments to review how to create
+the comments in the \mainprogramsource{} file. Moreover, the provided source
+code is missing many of the lines that are needed to pass the GatorGrader
+checks. Review the requirements for this Java source code file, as outlined in
+the previous section. You should also study the source code of this file to
+learn more about what you need to add to it.
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
-completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
-will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
-do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
-it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{}, and then checking to see that the transfer to
-GitHub is successful. Remember, to correctly complete this assignment you need to commit all code and writing files to
-GitHub. If you notice that the network communication with GitHub did not work, then please try to determine why, asking
-a teaching assistant or the course instructor for additional assistance.
+To get started with the use of GatorGrader, type the command \gatorgraderstart{}
+in your terminal window. Once this step completes you can type
+\gatorgradercheck{}. If your work does not meet all of the assignment's
+requirements, then you will see the following output in your terminal:
+\command{Overall, are there any mistakes in the assignment? Yes}. If you do have
+mistakes in your assignment, then you will need to review GatorGrader's output,
+find the mistake, and try to fix it. Once your program is building correctly,
+fulfilling at least some of the assignment's requirements, you should transfer
+your files to GitHub using the \gitcommit{} and \gitpush{} commands. For
+example, if you want to signal that the \mainprogramsource{} file has been
+changed and is ready for transfer to GitHub you would first type
+\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{}, and
+then checking to see that the transfer to GitHub is successful. Remember, to
+correctly complete this assignment you need to commit all code and writing files
+to GitHub. If you notice that the network communication with GitHub did not
+work, then please try to determine why, asking a teaching assistant or the
+course instructor for additional assistance.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
-towards your grade for this laboratory assignment. In conclusion, here are some points to remember for creating programs
-that performs steganography:
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of your
+assignment, checking to see if it meets all of the requirements. If both your
+source code and writing meet all of the established requirements, then you will
+see a green \checkmark{} in the listing of commits in GitHub after awhile. If
+your submission does not meet the requirements, a red \naughtmark{} will appear
+instead. The instructor will reduce a student's grade for this assignment if the
+red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit
+in your GitHub repository, then you satisfied all of the main checks, thereby
+allowing the course instructor to evaluate other aspects of your source code and
+writing, as further described in the \step{Evaluation} section of this
+assignment sheet. Unless you provide the instructor with documentation of the
+extenuating circumstances that you are facing, no late work will be considered
+towards your grade for this laboratory assignment. In conclusion, here are some
+points to remember for creating programs that performs steganography:
+
+\vspace*{-.1in}
 
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-\item You should think carefully about how the $20 \times 20$ grid can be displayed using variables.
+\item You should think carefully about how the $20 \times 20$ grid can be
+  displayed using variables.
 
-\item As in past assignments, your program only needs to have one {\tt main} method in one file.
+\item As in past assignments, your program only needs to have one {\tt main}
+  method in one file.
 
-\item See Figure 3.1 for a listing of some common \command{String} methods for use in your program.
+\item See Figure 3.1 for a listing of some common \program{String} methods for
+  use in your program.
 
-\item Your program will alternate between creating and displaying textual output---this is okay!
+\item Your program will alternate between creating and displaying textual
+  output---this is okay!
 
-\item Don't forget to review the assignment sheets from the previous laboratory and practical assignments as they
-  contain insights that will support your completion of this assignment.
+\item Don't forget to review the assignment sheets from the previous laboratory
+  and practical assignments as they contain insights that will support your
+  completion of this assignment.
 
 \end{enumerate}
-
+\vspace*{-.2in}
 
 \section*{Summary of the Required Deliverables}
 
