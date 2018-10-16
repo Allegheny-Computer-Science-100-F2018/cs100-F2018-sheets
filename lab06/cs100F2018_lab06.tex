@@ -310,12 +310,12 @@ are not cumulative.
   the DNA string that the user inputs into a variable called ``{\tt
   dnaSequence}''.
 
-\item Print the complement of {\tt dnaSequence} with a label. (Hint: use
-  several applications of the String class's ``{\tt replace}'' method. For
-  example, if I want to replace all characters `A' with characters `T' in the
-  {\tt String} variable called {\tt dnaSequence}, then I will say {\tt
-  dna.replace(`A',`T')}. But there's still another step to take in the case of
-  getting the complement!)
+\item Print the complement of {\tt dnaSequence} with a label. (Hint: use several
+  applications of the String class's ``{\tt replace}'' method. For example, if I
+  want to replace all characters `A' with characters `T' in the {\tt String}
+  variable called {\tt dnaSequence}, then I will say {\tt
+  dnaSequence.replace(`A',`T')}. But there's still another step to take in the
+  case of getting the complement!)
 
 Another hint regarding this strategy: As you make your substitutions to get your
 complementary string, remember that you are replacing, for example, \emph{A}'s
@@ -389,11 +389,14 @@ In the second example, nothing was changed in the last line---the {\tt
 ManipulateDNA} program randomly replaced the letter ``{\tt A}'' with the letter
 ``{\tt A}''! This behavior is acceptable.
 
-If you want to \step{build} your program you can type the command \gradlebuild{} in your terminal, thereby causing the
-Java compiler to check your program for errors and get it ready to run. If you get any error messages, go back into
-\program{gvim} and try to figure out what you mis-typed and fix it. Once you have solved the problem, make a note of the
-error and the solution for resolving it. Re-save your program and then build it again by re-running the \gradlebuild{}.
-If you cannot build \mainprogram{} correctly, then please talk with a teaching assistant or the instructor.
+If you want to \step{build} your program you can type the command \gradlebuild{}
+in your terminal, thereby causing the Java compiler to check your program for
+errors and get it ready to run. If you get any error messages, go back into
+\program{gvim} and try to figure out what you mis-typed and fix it. Once you
+have solved the problem, make a note of the error and the solution for resolving
+it. Re-save your program and then build it again by re-running the
+\gradlebuild{}. If you cannot build \mainprogram{} correctly, then please talk
+with a teaching assistant or the instructor.
 
 When all of the errors are eliminated, you can run your program by typing
 \gradlerun{} in the terminal window---this is the ``execute'' step that will run
