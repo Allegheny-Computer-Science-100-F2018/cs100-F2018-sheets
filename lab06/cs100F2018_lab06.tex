@@ -268,18 +268,19 @@ language.  Essentially, a DNA string is a string consisting of only the letters
 strings encode various genetic traits such as hair color, eye color, and many
 others.
 
-Each DNA string has a {\em complement} formed by replacing each code letter by
-its complementary code. {\tt A} and {\tt T} are complements; so are {\tt G} and
-{\tt C}. Thus, the complement to the string ``{\tt CAATGTCAC}'' is ``{\tt
-GTTACAGTG}''.  DNA sometimes undergoes a {\em mutation}. There are three types
-of mutation: insertion of a new letter somewhere in the string; removal of a
-letter from the string; and replacement of one letter by another. The following
-table shows the examples of the replacement of letters and the complement of the
-given sequence. Do you understand what took place during each of these
-replacements? That is, make sure that you fully understand the meaning of each
-row in the table. Of course, you may talk with the course instructor or a
-teaching assistant or post a question in our Slack team if you find these
-examples of DNA manipulation to be difficult to understand.
+\marginnote{\caution{Modify DNA strings}}[.5in] Each DNA string has a {\em
+complement} formed by replacing each code letter by its complementary code. {\tt
+A} and {\tt T} are complements; so are {\tt G} and {\tt C}. Thus, the complement
+to the string ``{\tt CAATGTCAC}'' is ``{\tt GTTACAGTG}''.  DNA sometimes
+undergoes a {\em mutation}. There are three types of mutation: insertion of a
+new letter somewhere in the string; removal of a letter from the string; and
+replacement of one letter by another. The following table shows the examples of
+the replacement of letters and the complement of the given sequence. Do you
+understand what took place during each of these replacements? That is, make sure
+that you fully understand the meaning of each row in the table. Of course, you
+may talk with the course instructor or a teaching assistant or post a question
+in our Slack workspace if you find these examples of DNA manipulation to be
+difficult to understand.
 
 \begin{center}
 
@@ -299,49 +300,63 @@ $S_{complementary}$ &  $\mathtt{TGCACGGAGAACCATG}$ \\
 \end{tabular}
 \end{center}
 
-You should design and implement a Java program that does the following.  Note that all changes are made to the {\em
-original} input string --- that is, they are not cumulative.
+You should design and implement a Java program that does the following.  Note
+that all changes are made to the {\em original} input string --- that is, they
+are not cumulative.
 
 \begin{enumerate}
 
-\item Prompt the user to type in a string of DNA, declare a variable and save the DNA string that the user inputs into a
-  variable called ``{\tt dna}''.
+\item Prompt the user to type in a string of DNA, declare a variable and save
+  the DNA string that the user inputs into a variable called ``{\tt
+  dnaSequence}''.
 
-\item Print the complement of {\tt dna}, appropriately labeled.  (Hint: use several applications of the String class's
-  ``{\tt replace}'' method. For example, if I want to replace all characters `A' with characters `T' in the {\tt String}
-  variable called {\tt dna}, then I will say {\tt dna.replace(`A',`T')}. But there's still another step to take in the
-  case of getting the complement!)
+\item Print the complement of {\tt dnaSequence} with a label. (Hint: use
+  several applications of the String class's ``{\tt replace}'' method. For
+  example, if I want to replace all characters `A' with characters `T' in the
+  {\tt String} variable called {\tt dnaSequence}, then I will say {\tt
+  dna.replace(`A',`T')}. But there's still another step to take in the case of
+  getting the complement!)
 
-Another hint regarding this strategy: As you make your substitutions to get your complementary string, remember that you
-are replacing, for example, \emph{A}'s to \emph{T}'s from the $S$ to make the complementary sequence
-($S_{complementary}$). Do not simply perform such substitution directly because you will be unable to figure out which
-\emph{T}'s were original \emph{T}'s (and not the replaced ones) that you were supposed to change to \emph{A}'s. You can
-check your complementary sequence from the website  (using the \emph{Complement} option after you enter your sequence):
+Another hint regarding this strategy: As you make your substitutions to get your
+complementary string, remember that you are replacing, for example, \emph{A}'s
+to \emph{T}'s from the $S$ to make the complementary sequence
+($S_{complementary}$). Do not simply perform such substitution directly because
+you will be unable to figure out which \emph{T}'s were original \emph{T}'s (and
+not the replaced ones) that you were supposed to change to \emph{A}'s. You can
+check your complementary sequence from the website  (using the \emph{Complement}
+option after you enter your sequence):
 \url{http://arep.med.harvard.edu/labgc/adnan/projects/Utilities/revcomp.html}.
 
 \item[NOTE:]
 
-  The next three parts of your program will also use Java's {\tt java.util.Random} class. You may want to read the
-  textbook's description of the inputs to the methods of the {\tt Random} class; you may also ask the course instructor
-  for help with generating random numbers in Java.
+  The next three parts of your program will also use Java's {\tt
+  java.util.Random} class. You may want to read the textbook's description of
+  the inputs to the methods of the {\tt Random} class; you may also ask the
+  course instructor for help with generating random numbers in Java.
 
-\item \begin{sloppypar} Perform a random mutation consisting of inserting a randomly-chosen extra letter into {\tt
-  dna}; it must be one of the four ``allowed'' letters for DNA. Print this, ensuring that it is appropriately
-labeled and identifying the position of the insertion and the letter inserted. \end{sloppypar}
+\item \begin{sloppypar} Perform a random mutation consisting of inserting a
+    randomly-chosen extra letter into {\tt dnaSequence}; it must be one of the
+    four ``allowed'' letters for DNA. Print this, ensuring that it is correctly
+    labeled and identifying the position of the insertion and the letter
+  inserted. \end{sloppypar}
 
-\item Perform a random mutation consisting of removing a letter from a randomly-chosen position in the {\tt dna}.
-  Once again, display this in the terminal window, making sure that it is appropriately labeled and identifying the
-  position of the insertion and the letter removed.
+\item Perform a random mutation consisting of removing a letter from a
+  randomly-chosen position in the {\tt dnaSequence}. Once again, display this in
+  the terminal window, making sure that it is appropriately labeled and
+  identifying the position of the insertion and the letter removed.
 
-\item Perform a random mutation consisting of altering a single letter from a randomly-chosen position in {\tt
-  dna}; it must be changed to a randomly-chosen letter from the set of allowed letters for DNA. Print it,
-  appropriately labeled and identifying the position of the replacement, the new letter, and the letter it replaces.
-  This is the last output your program must perform.
+\item Perform a random mutation consisting of altering a single letter from a
+  randomly-chosen position in {\tt dnaSequence}; it must be changed to a
+  randomly-chosen letter from the set of allowed letters for DNA. Print it,
+  correctly labeled and identifying the position of the replacement, the new
+  letter, and the letter it replaces. This is the last output your program must
+  perform.
 
 \end{enumerate}
 
-The following gives two sample runs of a previously implemented version of the program. You will get different values,
-of course, since the changes are random, but the structure of the output will be the same. Please see the course
+The following gives two sample runs of a previously implemented version of the
+program. You will get different values, of course, since the changes are random,
+but the structure of the output will be the same. Please see the course
 instructor if you do not understand this program's output.
 
 \begin{verbatim}
