@@ -4,14 +4,14 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{October 2}
-\newcommand{\assignmentassignedate}{September 29}
+\newcommand{\assignmentduedate}{October 29}
+\newcommand{\assignmentassignedate}{October 26}
 \newcommand{\assignmentnumber}{Four}
 
-\newcommand{\labyear}{2017}
+\newcommand{\labyear}{2018}
 \newcommand{\labdueday}{Monday}
 \newcommand{\labassignday}{Friday}
-\newcommand{\labtime}{9:00 am}
+\newcommand{\labtime}{1:30 pm}
 
 \newcommand{\assigneddate}{Assigned: \labassignday, \assignmentassignedate, \labyear{} at \labtime{}}
 \newcommand{\duedate}{Due: \labdueday, \assignmentduedate, \labyear{} at \labtime{}}
@@ -21,9 +21,6 @@
 \newcommand{\mainprogram}{\lstinline{MadLibs}}
 \newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalfour/MadLibs.java}}
 
-\newcommand{\secondprogram}{\lstinline{PaintComplementaryDrawingCanvas}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalfour/PaintComplementaryDrawingCanvas.java}}
-
 % Edit this commands to describe key deliverables
 
 \newcommand{\reflection}{\lstinline{writing/reflection.md}}
@@ -31,8 +28,8 @@
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -84,7 +81,7 @@ descriptive commit message"}}
 \pagestyle{fancy}
 
 \fancyhf{}
-\rhead{Computer Science 111}
+\rhead{Computer Science 100}
 \lhead{Practical Assignment \assignmentnumber{}}
 \rfoot{Page \thepage}
 \lfoot{\duedate}
@@ -97,8 +94,8 @@ descriptive commit message"}}
   \begin{center}
     \begin{center}
       \bf
-      CMPSC 111\\Introduction to Computer Science I\\
-      Fall 2017\\
+      CMPSC 100\\Computational Expression\\
+      Fall 2018\\
       \medskip
     \end{center}
     \bf
@@ -114,23 +111,29 @@ descriptive commit message"}}
 
 \section*{Objectives}
 
-To continue practicing the use of GitHub to access the files for a practical assignment. Additionally, to practice using
-the Ubuntu operating system and software development programs such as a ``terminal window'' and the ``GVim text
-editor''. You will continue to practice using Slack to support communication with the teaching assistants and the course
-instructor. Next, you will learn more about file input and output, further discovering how the course's automated
-grading tool assesses your progress towards correctly completing the project. Finally, you will continue to learn more
-about variables and data types and the ways in which they are correctly combined.
+To continue practicing the use of GitHub to access the files for a practical
+assignment. Additionally, to practice using the Ubuntu operating system and
+software development programs such as a ``terminal window'' and the ``GVim text
+editor''. You will continue to practice using Slack to support communication
+with the teaching assistants and the course instructor. Next, you will learn
+more about file input and output, further discovering how the course's automated
+grading tool assesses your progress towards correctly completing the project.
+Finally, you will continue to learn more about variables and data types and the
+ways in which they are correctly combined.
 
 \section*{Suggestions for Success}
 
 \begin{itemize}
   \setlength{\itemsep}{0pt}
 
-\item {\bf Use the laboratory computers}. The computers in this laboratory feature specialized software for completing
-  this course's Laboratory and practical assignments. If it is necessary for you to work on a different machine, be sure
-  to regularly transfer your work to a laboratory machine so that you can check its correctness. If you cannot use a
-  laboratory computer and you need help with the configuration of your own laptop, then please carefully explain its
-  setup to a teaching assistant or the course instructor when you are asking questions.
+\item {\bf Use the laboratory computers}. The computers in this laboratory
+  feature specialized software for completing this course's Laboratory and
+  practical assignments. If it is necessary for you to work on a different
+  machine, be sure to regularly transfer your work to a laboratory machine so
+  that you can check its correctness. If you cannot use a laboratory computer
+  and you need help with the configuration of your own laptop, then please
+  carefully explain its setup to a teaching assistant or the course instructor
+  when you are asking questions.
 
 \item {\bf Follow each step carefully}. Slowly read each sentence in the assignment sheet, making sure that you
   precisely follow each instruction. Take notes about each step that you attempt, recording your questions and ideas and
