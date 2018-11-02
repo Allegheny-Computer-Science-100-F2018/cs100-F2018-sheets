@@ -4,9 +4,9 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{October 23}
-\newcommand{\assignmentassignedate}{October 20}
-\newcommand{\assignmentnumber}{Six}
+\newcommand{\assignmentduedate}{October 16}
+\newcommand{\assignmentassignedate}{October 13}
+\newcommand{\assignmentnumber}{Five}
 
 \newcommand{\labyear}{2017}
 \newcommand{\labdueday}{Monday}
@@ -18,11 +18,11 @@
 
 % Edit these commands to give the name to the main program
 
-\newcommand{\mainprogram}{\lstinline{YearCheckerMain}}
-\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalsix/YearCheckerMain.java}}
+\newcommand{\mainprogram}{\lstinline{RollAndSumDice}}
+\newcommand{\mainprogramsource}{\lstinline{src/main/java/practicalfive/RollAndSumDice.java}}
 
-\newcommand{\secondprogram}{\lstinline{YearChecker}}
-\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalsix/YearChecker.java}}
+\newcommand{\secondprogram}{\lstinline{Die}}
+\newcommand{\secondprogramsource}{\lstinline{src/main/java/practicalfive/Die.java}}
 
 % Edit this commands to describe key deliverables
 
@@ -50,7 +50,7 @@
 \newcommand{\gitpush}{\command{git push}}
 \newcommand{\gitpull}{\command{git pull}}
 
-\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalsix/YearCheckerMain.java -m "Your
+\newcommand{\gitcommitmainprogram}{\command{git commit src/main/java/practicalfive/RollAndSumDice.java -m "Your
 descriptive commit message"}}
 
 % Use this when displaying a new command
@@ -117,9 +117,9 @@ descriptive commit message"}}
 To continue practicing the use of GitHub to access the files for a practical assignment. Additionally, to practice using
 the Ubuntu operating system and software development programs such as a ``terminal window'' and the ``GVim text
 editor''. You will continue to practice using Slack to support communication with the teaching assistants and the course
-instructor. Next, you will create and then call methods that determine if certain events occurred during the year input
-from the file. For this task you will use {\tt if/else} statements and boolean logic operators such as ``{\tt \&\&}'' or
-``{\tt ||}''. Finally, you will continue to learn more about creating and using Java classes and objects.
+instructor. Next, you will learn more about random number generation and the use of {\tt java.util.Random}, further
+discovering how the course's automated grading tool assesses your progress towards correctly completing the project.
+Finally, you will continue to learn more about creating and using Java classes and objects.
 
 \section*{Suggestions for Success}
 
@@ -158,10 +158,12 @@ from the file. For this task you will use {\tt if/else} statements and boolean l
   any type of system failure, you are responsible for ensuring that you have access to a recent backup copy of all your
   files.
 
-\item {\bf Explore teamwork and technologies}. While certain aspects of these assignments will be challenging for you,
-  each part is designed to give you the opportunity to learn both fundamental concepts in the field of computer science
-  and explore advanced technologies that are commonly employed at a wide variety of companies. To explore and develop
-  new ideas, you should regularly communicate with your team and/or the teaching assistants and tutors.
+\item {\bf Explore teamwork and technologies}. While certain aspects of these
+  assignments will be challenging for you, each part is designed to give you the
+  opportunity to learn both fundamental concepts in the field of computer
+  science and explore advanced technologies that are commonly employed at a wide
+  variety of companies. To explore and develop new ideas, you should regularly
+  communicate with your team and/or the teaching assistants and tutors.
 
 \item {\bf Hone your technical writing skills}. Computer science assignments require to you write technical
   documentation and descriptions of your experiences when completing each task. Take extra care to ensure that your
@@ -177,13 +179,12 @@ from the file. For this task you will use {\tt if/else} statements and boolean l
 \section*{Reading Assignment}
 
 If you have not done so already, please read all of the relevant ``GitHub Guides'', available at
-\url{https://guides.github.com/}, that explain how to use many of the GitHub's features. In particular, please make sure
-that you have read guides such as ``Mastering Markdown'' and ``Documenting Your Projects on GitHub''; each of them will
-help you to understand how to use both GitHub and GitHub Classroom. Focusing on the content about creating and using
-Java objects and writing conditional logic, you should review Chapters 1 through 4 and Sections 5.1 and 5.3 in the
-textbook.
+\url{https://guides.github.com/}, that explain how to use many of the features that GitHub provides. In particular,
+please make sure that you have read guides such as ``Mastering Markdown'' and ``Documenting Your Projects on GitHub'';
+each of them will help you to understand how to use both GitHub and GitHub Classroom. Focusing on the content about
+creating and using Java objects, you should review Chapters 1 through 3 and Sections 4.1 and 4.2 in the textbook.
 
-\section*{Using Conditional Logic in a Java Program}
+\section*{Creating and Using Java Objects}
 
 To access the practical assignment, you should go into the \channel{\#announcements} channel in our Slack team and find
 the announcement that provides a link for it. Copy this link and paste it into your web browser. Now, you should accept
@@ -192,64 +193,30 @@ assignment's starting materials and to store the completed version of your assig
 GitHub repository for this assignment, please click the green ``Accept'' button and then click the link that is prefaced
 with the label ``Your assignment has been created here''. If you accepted the assignment and correctly followed these
 steps, you should have created a GitHub repository with a name like
-``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-6-gkapfham''. Unless you provide the
+``Allegheny-Computer-Science-111-Fall-2017/computer-science-111-fall-2017-practical-5-gkapfham''. Unless you provide the
 instructor with documentation of the extenuating circumstances that you are facing, not accepting the assignment means
 that you automatically receive a failing grade for it. Please follow the steps from the previous laboratory assignments
 for finding your ``home base'' for this practical assignment; see the instructor if you are stuck on getting started.
 
-This practical assignment is inspired by a quotation is from Allegheny College's Alma Mater. In one of the classes for
-this assignment, {\tt YearChecker.java}, you will write methods that, for the file's input from {\tt
-YearCheckerMain.java}, determine which of the following events occurs that year: \begin{itemize}
-
-\item
-it is designated as a leap year
-
-\item
-the emergence of the 17-year cicadas (more specifically, Brood II)
-
-\item
-it is predicted to be a peak year of sunspot activity
-
-\end{itemize}
-
-\noindent A year is a {\em leap year\/} if it is divisible by 4, {\em unless\/} it is a century year. If it is a century
-year, it is a leap year if it is divisible by 400. For instance, 1968 and 1972 are leap years since they are divisible
-by 4; 1967 and 1970 are not. The year 2000 is a leap year because it is divisible by 400; however, 1900 is not (even
-though 1900 is divisible by 4---century years are treated differently).
-
-\noindent The 17-year cicadas emerge from underground every 17 years. There are several ``broods''---the one in which we
-have interest emerged most recently in 2013. That is, any year that differs from 2013 by a multiple of 17 is also an
-emergence year for Brood II (e.g., 2040, 1996, 1928, and 3713).
-
-\noindent Sunspot activity usually peaks every 11 years. The year 2013 was supposed to be such a ``solar max'' year.
-This means that any year that differs from 2013 by a multiple of 11 should also be a solar max year. For instance, 2002,
-2024, and 1793 are all years predicted to exhibit peak activity.
-
 Figure~\ref{mad} contains the output from running a program like the one you must implement. You should study the
-comments in the \mainprogramsource{} to see each step that you have to implement. You should also look at the
-\secondprogramsource{} to see the methods that will ultimately contain the conditional logic. After finishing the both
-of these files, you should repeatedly test you program to make sure that it is creating the correct textual output. This
-will involve you editing the input file and then building and running the program and checking the output to ensure that
-it produces different values and that the checks are correct. Don't forget that this practical assignment requires you
-to understand and edit two different files called \mainprogramsource{} and \secondprogramsource{}. This means that you
-must have correct formatting and documentation in both of these files; check the {\tt README.md} file for a statement of
-other checks. You should also be able to draw a diagram explaining the relationship between the two source code files.
+comments in the \mainprogramsource{} to see each step that you have to implement. Specifically, your program must create
+three instances of the \command{Die} class, display the face value of each one of these instances, sum these face values
+together, and then output the sum. After finishing the \mainprogramsource{} file, you should repeatedly test you program
+to make sure that it is creating the correct textual output. This will involve you building and running the program and
+checking the output to ensure that it produces different values and that the summation is correct. Don't forget that
+this practical assignment requires you to understand and edit two different files called \mainprogramsource{} and
+\secondprogramsource{}. This means that you must have correct formatting and documentation in both of these files. You
+should also be able to draw a diagram that explains the relationship between the two Java source code files.
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
-Gregory M. Kapfhammer Thu Oct 19 23:39:16 EDT 2017
-
-I will read in a year between 1000 and 3000.
-Okay, I read in the year 1452.
-
-Is the year 1452 a leap year? Yes
-Is the year 1452 a cicada emergence year? Yes
-Is the year 1452 a year of peak sunspot activity? Yes
-
-Thank you for using the YearChecker.
+Die One's Face Value: 1
+Die Two's Face Value: 5
+Die Three's Face Value: 6
+The Sum of the Three Die is: 12
 \end{Verbatim}
 \vspace*{-.1in}
-\caption{Sample ``{\tt YearCheckerMain}'' output featuring output from conditional logic checks.}
+\caption{Sample ``{\tt RollAndSumDice}'' output featuring randomly generated values.}
 \label{mad}
 \end{figure}
 
@@ -284,13 +251,47 @@ circumstances that you are facing, no late work will be considered towards your 
 assignment. You should aim to finish practical assignments on the day that they are assigned; please see the instructor
 if you do not understand this policy.
 
+\section*{Additional Success Strategies for the Practical Sessions}
+
 Since this is another challenging practical assignment and you are still learning how to use the Java classes and
 objects, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
 about the necessary technology and the background and expertise of the other students in the class, the teaching
 assistants, and the course instructor.
 
-\noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
-Instead, this assignment invites you to submit, using GitHub, the following deliverables. Because this is a practical
+\vspace*{-.05in}
+\begin{itemize}
+
+\item {\bf Review the Textbook.} Look at the technical diagrams in Section 4.2 of the textbook, paying close attention
+  to the meaning of each element and how it connects to the code.
+
+\item {\bf Write Exceptional Comments.} Remember, while it is true that we write Java programs to run on a computer, it
+  is also the case that we should create them so that they are understandable by human beings. As you are completing
+  this assignment, pay close attention to each of the comments that you write. Did you create comments that you will be
+  able to easily understand if you look at them several weeks from now? Do all of your comments accurately describe the
+  behavior of your Java source code? If you answered ``no'' to either one of these questions, then please take extra
+  time to revise the comments in your Java source code.
+
+\item {\bf Practice Key Laboratory Skills.} As you are completing this assignment, practice using the {\tt gvim} text
+  editor and the terminal until you can easily use their most important features. If you would like, you can also try
+  out other text editors and advanced terminal commands.
+
+\item {\bf Experiment.} Practical sessions are for learning by doing without the pressure of letter grades. So try
+  things! To learn more about classes and objects, please intelligently experiment with the code, regularly making small
+  incremental changes and observing the output.
+
+\item {\bf Help One Another!} If your neighbor is struggling and you know what to do, offer your help. Don't ``do the
+  work'' for them, but advise them on what to type or how to handle things. If you are stuck on a part of this practical
+  assignment and you could not find any insights in either your textbook or online sources, formulate a question to ask
+  your neighbor, a teaching assistant, or a course instructor. Try to strike the right balance between asking for help
+  when you cannot solve a problem and working independently to find a solution.
+
+\end{itemize}
+
+\section*{Summary of the Required Deliverables}
+
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables. Because this is a practical
 assignment, you are not required to complete any technical writing.
 
 \begin{enumerate}
@@ -299,9 +300,6 @@ assignment, you are not required to complete any technical writing.
 
 \item A correct version of \mainprogramsource{} that meets all of the established source code requirements and produces
   the desired text-based output.
-
-\item A correct version of \secondprogramsource{} that meets all of the established source code requirements and
-  produces the desired text-based output.
 
 \end{enumerate}
 
