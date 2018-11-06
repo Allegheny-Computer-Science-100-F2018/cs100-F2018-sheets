@@ -201,30 +201,35 @@ the course instructor if you have any questions about this reading assignment.
 
 \section*{Accessing the Laboratory Assignment on GitHub}
 
-% TODO: GitHub Classroom does not allow reuse of group names in the way that I expected
+To access the laboratory assignment, you should go into the
+\channel{\#announcements} channel in our Slack team and find the announcement
+that provides a link for it. Copy this link and paste it into your web browser.
+Now, you should accept the laboratory assignment and see that GitHub Classroom
+created a new GitHub repository for you to access the assignment's starting
+materials and to store the completed version of your assignment. Specifically,
+to access your new GitHub repository for this assignment, please click the green
+``Accept'' button and then click the link that is prefaced with the label ``Your
+assignment has been created here''. If you accepted the assignment and correctly
+followed these steps, you should have created a GitHub repository with a name
+like
+``Allegheny-Computer-Science-100-Fall-2018/computer-science-100-fall-2018-lab-7-gkapfham''.
+Unless you provide the instructor with documentation of the extenuating
+circumstances that you are facing, not accepting the assignment means that you
+automatically receive a failing grade for it.
 
-To access the laboratory assignment, you should go into the \channel{\#announcements} channel in our Slack team and find
-the announcement that provides a link for it. Now, make sure that the leader of your team also notes your team number
-and first copies this link and pastes it into their web browser. Next, the team leader (i.e., the first person in the
-group listing on Slack) will create their team with the name \command{Computer-Science-100-Fall-2018-Lab-7-Group-<group
-number>} and then accept the laboratory assignment and see that GitHub Classroom created a new GitHub repository for
-your team to access the assignment's starting materials and to store the completed version of your assignment. Note that
-the team leader will have to type their group name and number into a text field. For instance, if the team leader was in
-the second group then that person would type ``Group 2'' into the text field. At this point, each additional member of
-the team can accept the assignment through GitHub. Please make sure that each of your team members joins the team to
-which the instructor assigned them to work. Unless you provide the instructor with documentation of the extenuating
-circumstances that you are facing, not accepting the assignment means that you automatically receive a failing grade for
-it. Please see the course instructor with any questions.
-
-Before you move to the next step of this assignment, please make sure that you read all of the content on the web site
-for your new GitHub repository, paying close attention to the technical details about the commands that you will type
-and the output that your program must produce. Now you are ready to download the starting materials to your laboratory
-computer. Click the ``Clone or download'' button and, after ensuring that you have selected ``Clone with SSH'', please
-copy this command to your clipboard. To enter into the right directory you should now type \command{cd cs100F2018}.
-Next, you can type the command \command{ls} and see that there are some files or directories inside of this directory.
-By typing \command{git clone} in your terminal and then pasting in the string that you copied from the GitHub site you
-will download all of the code for this assignment. For instance, if the course instructor ran the \command{git clone}
-command in the terminal, it would look like:
+Before you move to the next step of this assignment, please make sure that you
+read all of the content on the web site for your new GitHub repository, paying
+close attention to the technical details about the commands that you will type
+and the output that your program must produce. Now you are ready to download the
+starting materials to your laboratory computer. Click the ``Clone or download''
+button and, after ensuring that you have selected ``Clone with SSH'', please
+copy this command to your clipboard. To enter into the right directory you
+should now type \command{cd cs100F2018}. Next, you can type the command
+\command{ls} and see that there are some files or directories inside of this
+directory. By typing \command{git clone} in your terminal and then pasting in
+the string that you copied from the GitHub site you will download all of the
+code for this assignment. For instance, if the course instructor ran the
+\command{git clone} command in the terminal, it would look like:
 
 \begin{lstlisting}
   git clone git@github.com:Allegheny-Computer-Science-100-F2018/computer-science-100-fall-2018-lab-7-gkapfham.git
@@ -236,22 +241,34 @@ location, then you can type the command \command{cd ..}. Please continue to use
 the \command{cd} and \command{ls} commands to explore the files that you
 automatically downloaded from GitHub. What files and directories do you see?
 What do you think is their purpose? Spend some time exploring, sharing your
-discoveries with a neighbor and a \mbox{teaching assistant}.
+discoveries with a neighbor and a \mbox{teaching assistant}. You should study
+the code with an eye towards determining what parts of it are likely to contain
+defects!
 
-\section*{Participating in a ``Bug Hunt''}
+\section*{Participate in a Realistic ``Bug Hunt''}
 
-You and your group members should explore your repository by using {\tt gvim} to
-study the source code of the {\tt CommandLineGeometer.java} and {\tt
-GeometricCalculator.java} files. What methods do these classes provide? How do
-they work? Does any of this code look incorrect? Why?
+You should explore your repository by using a text editor to study the source
+code of the {\tt CommandLineGeometer.java} and {\tt GeometricCalculator.java}
+files. What methods do these classes provide? How do they work? Does any of this
+code look incorrect? Why? After carefully reviewing the source code and PP 3.6,
+3.7, and 3.9 on page 145 of your textbook and then compiling and running the
+{\tt CommandLineGeometer} class, you should notice that there are several
+defects in this program. As such, you will need to take part in a ``bug hunt''
+to find and fix all of the problems. First, you should find the method
+responsible for calculating the volume of a sphere as given in the following
+code segment. Using the equation in PP 3.6 as a reference point, what is the
+defect in this method? Please find and fix this defect before moving on to the
+next steps in the assignment!
 
-After carefully reviewing the source code and PP 3.6, 3.7, and 3.9 on page 145
-of your textbook and then compiling and running the {\tt CommandLineGeometer}
-class, you should notice that there are several defects in this program. As
-such, you will need to take part in a ``bug hunt'' to find and fix all of the
-problems. First, you should find the method responsible for calculating the
-volume of a sphere. Using the equation in PP 3.6 as a reference point, what is
-the defect in this method?
+\vspace*{-.05in}
+\begin{verbatim}
+  public static double calculateSphereVolume(double radius) {
+    double volume;
+    volume = (3 / 4) * (Math.PI) * radius * radius * radius;
+    return volume;
+  }
+\end{verbatim}
+\vspace*{-.05in}
 
 The {\tt GeometricCalculator} also provides a method to calculate a triangle's
 area. Once again, there is a mistake in this method. Can you find and fix it?
@@ -261,14 +278,19 @@ is another defect lurking in the source code. Wait! If you carefully study the
 way in which the {\tt CommandLineGeometer} calls the method provided by the {\tt
 GeometricCalculator} and then displays the resulting output, you will realize
 that there is another bug in this program. Make sure you have found all of the
-problems before continuing with this laboratory assignment.
+problems before continuing with this laboratory assignment. Don't forget that
+you must document how you fixed the bug with comments in the code and written
+content in your reflection document.
 
-You and your group member(s) should complete this assignment by using GitHub and proceeding incrementally. That is, one
-member of the team should be in charge of typing when you find and fix the first defect. Then, that person should commit
-and push all of the repaired Java files and the other team member(s) should run \command{git pull}. Now, a new team
-member should perform the typing when finding and fixing the next defect. Importantly, one of the goals for this
-assignment is for all of the team members to gain experience with using GitHub to collaborate in a team. Please see the
-course instructor if you do not understand how to use GitHub to complete this task.
+% You and your group member(s) should complete this assignment by using GitHub and
+% proceeding incrementally. That is, one member of the team should be in charge of
+% typing when you find and fix the first defect. Then, that person should commit
+% and push all of the repaired Java files and the other team member(s) should run
+% \command{git pull}. Now, a new team member should perform the typing when
+% finding and fixing the next defect. Importantly, one of the goals for this
+% assignment is for all of the team members to gain experience with using GitHub
+% to collaborate in a team. Please see the course instructor if you do not
+% understand how to use GitHub to complete this task.
 
 \section*{Extending the Geometry Calculator}
 
@@ -370,7 +392,7 @@ towards your grade for this laboratory assignment. In conclusion, here are some 
 that performs computations:
 
 \begin{enumerate}
-  \setlength{\itemsep}{0pt}
+  \setlength{\itemsep}{.1pt}
 
 \item The provided source code contains many defects in it---make sure that you find them all!
 
@@ -443,14 +465,32 @@ assignment.
 
 \section*{Adhering to the Honor Code}
 
-In adherence to the Honor Code, students should complete this assignment with
-their team members. While it is appropriate for students in this class to have
-high-level conversations about the assignment, it is necessary to distinguish
-carefully between the student who discusses the principles underlying a problem
-with others and the student who produces assignments that are identical to, or
-merely variations on, someone else's work. Deliverables (e.g., source code or
-Markdown-based technical writing) that are nearly identical to the work of
-outsiders will be taken as evidence of violating the \mbox{Honor Code}. Please
-see the course instructor with any questions about this policy.
+The Academic Honor Program that governs the entire academic program at Allegheny
+College is described in the Allegheny Academic Bulletin. The Honor Program
+applies to all work that is submitted for academic credit or to meet non-credit
+requirements for graduation at Allegheny College. This includes all work
+assigned for this class (e.g., examinations, laboratory assignments, and the
+final project). All students who have enrolled in the College will work under
+the Honor Program. Each student who has matriculated at the College has
+acknowledged the following pledge:
+
+\vspace*{-.11in}
+\begin{quote}
+  I hereby recognize and pledge to fulfill my responsibilities, as defined in
+  the Honor Code, and to maintain the integrity of both myself and the College
+  community as a whole.
+\end{quote}
+\vspace*{-.11in}
+
+\noindent It is understood that an important part of the learning process in any
+course, and particularly one in computer science, derives from thoughtful
+discussions with teachers and fellow students. Such dialogue is encouraged.
+However, it is necessary to distinguish carefully between the student who
+discusses the principles underlying a problem with others and the student who
+produces assignments that are identical to, or merely variations on, someone
+else's work. While it is acceptable for students in this class to discuss their
+programs, data sets, and reports with their classmates, deliverables that are
+nearly identical to the work of others will be taken as evidence of violating
+the \mbox{Honor Code}.
 
 \end{document}
