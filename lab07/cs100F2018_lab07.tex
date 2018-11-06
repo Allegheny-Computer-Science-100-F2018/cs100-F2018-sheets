@@ -280,7 +280,9 @@ GeometricCalculator} and then displays the resulting output, you will realize
 that there is another bug in this program. Make sure you have found all of the
 problems before continuing with this laboratory assignment. Don't forget that
 you must document how you fixed the bug with comments in the code and written
-content in your reflection document.
+content in your reflection document. Please take the necessary time to develop a
+thorough understanding of how a Java program's source code might lead to
+incorrect output in the terminal.
 
 % You and your group member(s) should complete this assignment by using GitHub and
 % proceeding incrementally. That is, one member of the team should be in charge of
@@ -295,29 +297,39 @@ content in your reflection document.
 \section*{Extending the Geometry Calculator}
 
 \begin{sloppypar}
-  After reviewing the aforementioned programming projects on page 158 of your textbook, you will also notice that the {\tt
-  GeometricCalculator.java} does not contain methods for calculating the surface area of a sphere or a cylinder. While
-  avoiding all of the mistake types that you corrected in the previous phase of this assignment, please add in new methods
-  to perform these calculations. In addition, you will need to add appropriate input and output statements and method
-  calls to the {\tt CommandLineGeometer} to ensure that the entire program works correctly. For instance, you will need to
-  implement a new method called {\tt calculateSphereSurfaceArea} to the {\tt GeometricCalculator.java} file and then add
-  input and output code to the {\tt CommandLineGeometer.java} file. Whenever possible, try to follow the correct
-  pattern established in the given source code. Please see the course instructor if you have questions!
+  After reviewing the aforementioned programming projects on
+  page 145 of your textbook, you will also notice that the {\tt
+  GeometricCalculator.java} does not contain methods for calculating the surface
+  area of a sphere or a cylinder. While avoiding all of the mistake types that
+  you corrected in the previous phase of this assignment, please add in new
+  methods to perform these calculations. In addition, you will need to add
+  appropriate input and output statements and method calls to the {\tt
+  CommandLineGeometer} to ensure that the entire program works correctly. For
+  instance, you will need to implement a new method called {\tt
+  calculateSphereSurfaceArea} to the {\tt GeometricCalculator.java} file and
+  then add input and output code to the {\tt CommandLineGeometer.java} file.
+  Whenever possible, try to follow the correct pattern established in the given
+  source code. Please see the course instructor if you have questions!
 \end{sloppypar}
 
-As you continue to critically review the source code of the {\tt CommandLineGeometer}, you will notice that it does not
-always consistently produce output for the user. For example, even though it displays the user-input radius before
-calling {\tt calculateSphereVolume}, it does not appropriately display the sides of the triangle for the {\tt
-computeTriangleArea} method---can you please add in this feature? Moreover, none of the output of the {\tt double}
-variables in the {\tt CommandLineGeometer} is formatted in a consistent fashion. To solve this problem, you should use
-one of the techniques described in Section 3.6 of your textbook to format the output of all decimals to contain four
-decimal points. For instance, you may consider creating an instance of the {\tt DecimalFormat} class.
+As you continue to critically review the source code of the {\tt
+CommandLineGeometer}, you will notice that it does not always consistently
+produce output for the user. For example, even though it displays the
+user-input radius before calling {\tt calculateSphereVolume}, it does not
+appropriately display the sides of the triangle for the {\tt
+computeTriangleArea} method---can you please add in this feature? Moreover,
+none of the output of the {\tt double} variables in the {\tt
+CommandLineGeometer} is formatted in a consistent fashion. To solve this
+problem, you should use one of the techniques described in Section 3.6 of your
+textbook to format the output of all decimals to contain four decimal points.
+For instance, you may consider creating an instance of the {\tt DecimalFormat}
+class.
 
-Please notice that most of the provided code is not commented. As part of this assignment, your team should add
-detailed comments to the code, following the JavaDoc standard. Please see the instructor if you are not sure how or
-where to add comments to your program. Don't forget that you and your partner should evenly divide up the work needed to
-complete this assignment. This means that both of your user names should appear in the commit log of your GitHub
-repository.
+Please notice that most of the provided code is not commented. As part of this
+assignment, you should add detailed comments to the code, following the JavaDoc
+standard as appropriate. Please see the instructor if you are not sure how or
+where to add comments to your program. Again, you should also include comments
+that explain each of the defects and how you found and fixed them.
 
 \section*{Exploring the Features of the Java Programming Language}
 
@@ -378,37 +390,45 @@ the comments in the \mainprogramsource{} file. Moreover, the provided source
 code is missing many of the lines that are needed to pass the GatorGrader
 checks. Review the requirements for these Java code files, as outlined in the
 previous section. You can study the source code of this file to learn more about
-what you need to add to it. Don't forget to look in your team's GitHub
-repository to learn about GatorGrader's checks!
+what you need to add to it. Don't forget to look in your GitHub repository to
+learn about GatorGrader's checks!
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
-completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
-will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
-do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
-it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{}, and then checking to see that the transfer to
-GitHub is successful. Remember, to correctly complete this assignment you need to commit all code and writing files to
-GitHub. Also, all of the team members should practice using GitHub. If you notice that the network communication with
-GitHub did not work, then please try to determine why, asking a teaching assistant or the course instructor for
-additional assistance.
+To get started with the use of GatorGrader, type the command \gatorgraderstart{}
+in your terminal. If your laboratory work does not meet all of the assignment's
+requirements, then you will see a summary of the failing checks along with a
+statement giving the percentage of checks that are currently passing. If you do
+have mistakes in your assignment, then you will need to review GatorGrader's
+output, find the mistake, and try to fix it. Once your program is building
+correctly, fulfilling at least some of the assignment's requirements, you should
+transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands.
+For example, if you want to signal that the \mainprogramsource{} file has been
+changed and is ready for transfer to GitHub you would first type
+\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and then
+checking to see that the transfer to GitHub was successful. Make sure that you
+transfer your source code and technical writing to GitHub, as the instructor
+cannot access your deliverables unless you run the \gitpush{} command. Please
+see the instructor if you cannot upload your deliverables.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
-towards your grade for this laboratory assignment. In conclusion, here are some points to remember for creating programs
-that performs computations:
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of your
+assignment, checking to see if it meets all of the requirements. If both your
+source code and writing meet all of the established requirements, then you will
+see a green \checkmark{} in the listing of commits in GitHub after awhile. If
+your submission does not meet the requirements, a red \naughtmark{} will appear
+instead. The instructor will reduce a student's grade for this assignment if the
+red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit
+in your GitHub repository, then you satisfied all of the main checks, thereby
+allowing the course instructor to evaluate other aspects of your source code and
+writing, as further described in the \step{Evaluation} section of this
+assignment sheet. Unless you provide the instructor with documentation of the
+extenuating circumstances that you are facing, no late work will be considered
+towards your grade for this laboratory assignment. In conclusion, here are some
+points to remember for creating programs that performs computations:
 
 \begin{enumerate}
-  \setlength{\itemsep}{.1pt}
+  % \setlength{\itemsep}{.2pt}
 
 \item The provided source code contains many defects in it---make sure that you find them all!
 
@@ -451,8 +471,7 @@ to submit, using GitHub, the following deliverables.
   document should explain the input, output, and behavior of each command and
   the challenges that you confronted when using it. For every challenge that you
   encountered, please explain your solution for it. This document should also
-  explain how your team collaborated to finish the assignment, with each team
-  member writing their own paragraph inside of this Markdown file.
+  explain how you fixed each of the defects in the provided code.
 
 \item A complete and correct version of \mainprogramsource{} that meets all of
   the set requirements and produces the desired textual output in the terminal.
@@ -490,13 +509,13 @@ final project). All students who have enrolled in the College will work under
 the Honor Program. Each student who has matriculated at the College has
 acknowledged the following pledge:
 
-\vspace*{-.11in}
+% \vspace*{-.11in}
 \begin{quote}
   I hereby recognize and pledge to fulfill my responsibilities, as defined in
   the Honor Code, and to maintain the integrity of both myself and the College
   community as a whole.
 \end{quote}
-\vspace*{-.11in}
+% \vspace*{-.11in}
 
 \noindent It is understood that an important part of the learning process in any
 course, and particularly one in computer science, derives from thoughtful
@@ -507,6 +526,8 @@ produces assignments that are identical to, or merely variations on, someone
 else's work. While it is acceptable for students in this class to discuss their
 programs, data sets, and reports with their classmates, deliverables that are
 nearly identical to the work of others will be taken as evidence of violating
-the \mbox{Honor Code}.
+the \mbox{Honor Code}. You must uphold the Honor Code while completing this
+assignment. Students who do not understand how to adhere to the Honor Code
+should talk with the course instructor during office hours.
 
 \end{document}
