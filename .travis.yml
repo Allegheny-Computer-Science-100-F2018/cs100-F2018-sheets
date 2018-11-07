@@ -29,6 +29,7 @@ script:
 - latexmk -xelatex -pdf -outdir=_build practical04/cs100F2018_practical04.tex
 - latexmk -xelatex -pdf -outdir=_build practical05/cs100F2018_practical05.tex
 - latexmk -pdf -outdir=_build quiz01/cs100F2018_studyguide_quiz01.tex
+- latexmk -pdf -outdir=_build exam01/cs100F2018_studyguide_exam01.tex
 
 # securely deploy the PDFs to the specified tag on GitHub
 # GitHub's web site provides "releases" as a link near "commits"
@@ -50,6 +51,7 @@ deploy:
     - _build/cs100F2018_practical04.pdf
     - _build/cs100F2018_practical05.pdf
     - _build/cs100F2018_studyguide_quiz01.pdf
+    - _build/cs100F2018_studyguide_exam01.pdf
   skip_cleanup: true
   on:
     tags: true
