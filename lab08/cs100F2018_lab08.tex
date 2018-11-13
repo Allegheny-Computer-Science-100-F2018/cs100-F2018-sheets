@@ -4,12 +4,12 @@
 
 % Edit these commands for each assignment
 
-\newcommand{\assignmentduedate}{November 2}
-\newcommand{\assignmentassignedate}{October 26}
+\newcommand{\assignmentduedate}{November 20}
+\newcommand{\assignmentassignedate}{November 13}
 \newcommand{\assignmentnumber}{Eight}
 
-\newcommand{\labyear}{2017}
-\newcommand{\labday}{Thursday}
+\newcommand{\labyear}{2018}
+\newcommand{\labday}{Tuesday}
 \newcommand{\labtime}{2:30 pm}
 
 \newcommand{\assigneddate}{Assigned: \labday, \assignmentassignedate, \labyear{} at \labtime{}}
@@ -31,8 +31,8 @@
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -111,12 +111,14 @@ descriptive commit message"}}
 
 \section*{Objectives}
 
-In this laboratory assignment, you will learn more about using iteration constructs to perform numerical calculations,
-further explore the creation of formatted output, practice calling methods in another Java class, practice using
-conditional logic, and learn how to use {\tt while} loops, {\tt ArrayLists}, and {\tt Iterator}s. Since real-world
-software developers work in teams, you will collaborate with a partner to incrementally complete this project,
-practicing how the use of GitHub to work with team members. You will create a program, comprised of two Java classes,
-that performs calculations.
+In this laboratory assignment, you will learn more about using iteration
+constructs to perform numerical calculations, further explore the creation of
+formatted output, practice calling methods in another Java class, practice using
+conditional logic, and learn how to use {\tt while} loops, {\tt ArrayLists}, and
+{\tt Iterator}s. You will create a program, comprised of two Java classes, that
+performs calculations for the arithmetic mean and the minimum and maximum
+values. You will also learn how to modify the inputs so that you can extensively
+test your program and establish a confidence in its correctness.
 
 \section*{Suggestions for Success}
 
@@ -173,49 +175,59 @@ that performs calculations.
 
 \section*{Reading Assignment}
 
-After reviewing the GitHub materials, all of the assignment sheets for the past laboratory and practical sessions, and
-the course slides and notes, you should study Sections 5.1 through 5.8 of your textbook. As in a past assignment, you
-should also review the textbook's diagrams that are in Figures 4.7 and 4.8. See the course instructor if you have any
-questions about these readings.
+After reviewing the GitHub materials, all of the assignment sheets for the past
+laboratory and practical sessions, and the course slides and notes, you should
+study Sections 5.1 through 5.8 of your textbook. As in a past assignment, you
+should also review the textbook's diagrams that are in Figures 4.7 and 4.8. See
+the course instructor if you have any questions about these readings.
 
 \section*{Accessing the Laboratory Assignment on GitHub}
 
-To access the laboratory assignment, you should go into the \channel{\#announcements} channel in our Slack team and find
-the announcement that provides a link for it. Now, make sure that the leader of your team also notes your team number
-and first copies this link and pastes it into their web browser. Next, the team leader (i.e., the first person in the
-group listing on Slack) will create their team with the name \command{Computer-Science-111-Fall-2017-Lab-8-Group-<group
-number>} and then accept the laboratory assignment and see that GitHub Classroom created a new GitHub repository for
-your team to access the assignment's starting materials and to store the completed version of your assignment. Note that
-the team leader will have to type their group name and number into a text field. For instance, if the team leader was in
-the second group then that person would type ``Group 2'' into the text field. At this point, each additional member of
-the team can accept the assignment through GitHub. Please make sure that each of your team members joins the team to
-which the instructor assigned them to work. Unless you provide the instructor with documentation of the extenuating
-circumstances that you are facing, not accepting the assignment means that you automatically receive a failing grade for
-it. Please see the course instructor with any questions.
+To access the laboratory assignment, you should go into the
+\channel{\#announcements} channel in our Slack team and find the announcement
+that provides a link for it. Copy this link and paste it into your web browser.
+Now, you should accept the laboratory assignment and see that GitHub Classroom
+created a new GitHub repository for you to access the assignment's starting
+materials and to store the completed version of your assignment. Specifically,
+to access your new GitHub repository for this assignment, please click the green
+``Accept'' button and then click the link that is prefaced with the label ``Your
+assignment has been created here''. If you accepted the assignment and correctly
+followed these steps, you should have created a GitHub repository with a name
+like
+``Allegheny-Computer-Science-100-Fall-2018/computer-science-100-fall-2018-lab-7-gkapfham''.
+Unless you provide the instructor with documentation of the extenuating
+circumstances that you are facing, not accepting the assignment means that you
+automatically receive a failing grade for it.
 
-Before you move to the next step of this assignment, please make sure that you read all of the content on the web site
-for your new GitHub repository, paying close attention to the technical details about the commands that you will type
-and the output that your program must produce. Now you are ready to download the starting materials to your laboratory
-computer. Click the ``Clone or download'' button and, after ensuring that you have selected ``Clone with SSH'', please
-copy this command to your clipboard. To enter into the right directory you should now type \command{cd cs111F2017}.
-Next, you can type the command \command{ls} and see that there are some files or directories inside of this directory.
-By typing \command{git clone} in your terminal and then pasting in the string that you copied from the GitHub site you
-will download all of the code for this assignment. For instance, if the course instructor ran the \command{git clone}
-command in the terminal, it would look like:
+Before you move to the next step of this assignment, please make sure that you
+read all of the content on the web site for your new GitHub repository, paying
+close attention to the technical details about the commands that you will type
+and the output that your program must produce. Now you are ready to download the
+starting materials to your laboratory computer. Click the ``Clone or download''
+button and, after ensuring that you have selected ``Clone with SSH'', please
+copy this command to your clipboard. To enter into the right directory you
+should now type \command{cd cs111F2017}. Next, you can type the command
+\command{ls} and see that there are some files or directories inside of this
+directory. By typing \command{git clone} in your terminal and then pasting in
+the string that you copied from the GitHub site you will download all of the
+code for this assignment. For instance, if the course instructor ran the
+\command{git clone} command in the terminal, it would look like:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-111-F2017/computer-science-111-fall-2017-lab-8-group-2.git
+  git clone git@github.com:Allegheny-Computer-Science-100-F2018/computer-science-100-fall-2018-lab-7-gkapfham.git
 \end{lstlisting}
 
-After this command finishes, you can use \command{cd} to change into the new directory. If you want to \step{go back}
-one directory from your current location, then you can type the command \command{cd ..}. Please continue to use the
-\command{cd} and \command{ls} commands to explore the files that you automatically downloaded from GitHub. What files
-and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
-a neighbor and a \mbox{teaching assistant}.
+After this command finishes, you can use \command{cd} to change into the new
+directory. If you want to \step{go back} one directory from your current
+location, then you can type the command \command{cd ..}. Please continue to use
+the \command{cd} and \command{ls} commands to explore the files that you
+automatically downloaded from GitHub. What files and directories do you see?
+What do you think is their purpose? Spend some time exploring, sharing your
+discoveries with a neighbor and a \mbox{teaching assistant}.
 
 \begin{figure}[tb]
 \begin{Verbatim}[commandchars=\\\{\}]
-  Gregory M. Kapfhammer Thu Oct 26 09:49:50 EDT 2017
+  Gregory M. Kapfhammer Fri Oct 26 09:49:50 EDT 2018
   Welcome to the Command Line Calculator!
 
   Okay, I read in 5 values. Here they are:
@@ -237,29 +249,43 @@ a neighbor and a \mbox{teaching assistant}.
 \label{fig:output}
 \end{figure}
 
-\section*{Collaboratively Implementing a Computation Engine}
+\section*{Extending and Implementing a Numerical Computation Engine}
 
-You and your group members should explore your repository by using a text editor to study the source code of the {\tt
-CommandLineCalculator.java} and {\tt NumericalCalculator.java} files. What methods do these classes provide? How do they
-work? Can you draw a picture that depicts the relationship between these two Java classes? Before you and your group
-members move onto the next step of this assignment, make sure that you understand what parts of the system are already
-implemented and what you have to extend and add in order to complete the assignment.
+You should explore your repository by using a text editor to study the source
+code of the {\tt CommandLineCalculator.java} and {\tt NumericalCalculator.java}
+files. What methods do these classes provide? How do they work? Can you draw a
+picture that depicts the relationship between these two Java classes? Do you see
+how one class will call the methods of the other? Before you start the next step
+of this assignment, make sure that you understand what parts of the system are
+already implemented and what you have to extend and add in order to complete the
+assignment.
 
-You will notice that this assignment organizes the methods into two separate classes, as you have seen in past
-assignments and in-class exercises. In particular, the {\tt CommandLineCalculator} provides the user interface for our
-program and the {\tt NumericalCalculator} furnishes the methods that perform the required computations. If you want to
-make changes to the way in which the program accepts input or produces output, then you will need to modify the {\tt
-CommandLineCalculator}. Otherwise, if you want to modify the way in which the program performs a computation, or add a
-new computation, then you must make changes to the {\tt NumericalCalculator}. Overall, these two Java classes complete
-their work by following a pattern similar to that which is outlined in Figures 4.7 and 4.8 of your textbook. Please see
-the instructor if you have questions about this approach.
+You will notice that this assignment organizes the methods into two separate
+classes, as you have seen in past assignments and in-class exercises. In
+particular, the {\tt CommandLineCalculator} provides the user interface for our
+program and the {\tt NumericalCalculator} furnishes the methods that perform the
+required computations. If you want to make changes to the way in which the
+program accepts input or produces output, then you will need to modify the {\tt
+CommandLineCalculator}. Otherwise, if you want to modify the way in which the
+program performs a computation, or add a new computation, then you must make
+changes to the {\tt NumericalCalculator}. Overall, these two Java classes
+complete their work by following a pattern similar to that which is outlined in
+Figures 4.7 and 4.8 of your textbook. Please see the instructor if you have
+questions about this approach.
 
-Additionally, it is important to note that this assignment asks you to finish segments in both the {\tt
-CommandLineCalculator.java} and {\tt NumericalCalculator.java} files. For instance, step three and steps five through
-nine are not finished in the \mainprogram{}. This means that you will have to refer to previous assignments to learn
-more about how to read input from a file. Then, to perform computations you will invoke all of the methods in the
-\secondprogram{}. Yet, the \secondprogram{} also contains several methods in need of a finished implementation. Please
-refer to the \readme{} file in your repository for all of the requirements associated with these files.
+Additionally, it is important to note that this assignment asks you to finish
+segments in both the {\tt CommandLineCalculator.java} and {\tt
+NumericalCalculator.java} files. For instance, step three and steps five through
+nine are not finished in the \mainprogram{}. This means that you will have to
+refer to previous assignments to learn more about how to read input from a file.
+Then, to perform computations you will invoke all of the methods in the
+\secondprogram{}. Yet, the \secondprogram{} also contains several methods in
+need of a finished implementation. Please refer to the \readme{} file in your
+repository for all of the requirements associated with these files. Finally, you
+should review the partial implementation of the \program{public static double
+calculateArithmeticMean(ArrayList<Integer> numberList)} method as it provides an
+illustrative example of how to iterate through the \program{numberList} in order
+to perform a numerical computation.
 
 \section*{Checking the Correctness of Your Program and Writing}
 
