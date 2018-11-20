@@ -179,54 +179,72 @@ GitHub.
   effectively communicate and collaborate with their team members and the tutors, teaching assistants, and course
   instructor.
 
-% \item {\bf Review the Honor Code on the syllabus}. While you may discuss your assignments with others, copying source
-%   code or writing is a violation of Allegheny College's Honor Code.
+\item {\bf Review the Honor Code on the syllabus}. While you may discuss your assignments with others, copying source
+  code or writing is a violation of Allegheny College's Honor Code.
 
 \end{itemize}
 
 \section*{Reading Assignment}
 
-To continue to learn more about ``{\tt if/else-if/else}'' statements and boolean expressions, please again review
-Sections 5.1--5.3. Since this assignment will also require you to continue to use Java classes and methods, you should
-once again review Sections 4.1--4.5. To best prepare for the content in this laboratory assignment, you should also
-study Sections 5.4--5.6, paying particularly close attention to the material about {\tt while} loops, {\tt break} and
-{\tt continue} statements, text file input, {\tt Iterators}, and the {\tt java.util.ArrayList} class. Students who are
-not familiar with text-based todo list management tools are encouraged to review the web site \url{http://todotxt.com/}.
+To continue to learn more about ``{\tt if/else-if/else}'' statements and boolean
+expressions, please again review Sections 5.1--5.3. Since this assignment will
+also require you to continue to use Java classes and methods, you should once
+again review Sections 4.1--4.5. To best prepare for the content in this
+laboratory assignment, you should also study Sections 5.4--5.6, paying
+particularly close attention to the material about {\tt while} loops, {\tt
+break} and {\tt continue} statements, text file input, {\tt Iterators}, and the
+{\tt java.util.ArrayList} class. Students who are not familiar with text-based
+todo list management tools are encouraged to review the web site
+\url{http://todotxt.org/}.
 
 \section*{Accessing the Laboratory Assignment on GitHub}
 
-To access the laboratory assignment, you should go into the \channel{\#announcements} channel in our Slack team and find
-the announcement that provides a link for it. Now, make sure that the leader of your team also notes your team number
-and first copies this link and pastes it into their web browser. Next, the team leader (i.e., the first person in the
-group listing on Slack) will create their team with the name \command{Computer-Science-111-Fall-2017-Lab-9-Group-<group
-label>} and then accept the laboratory assignment and see that GitHub Classroom created a new GitHub repository for
-your team to access the assignment's starting materials and to store the completed version of your assignment. Note that
-the team leader will have to type their group and lab details into a text field. For instance, if the team leader was in
-the second group then that person would type ``Group 2 for Lab 9'' into the text field. At this point, each additional
-member of the team can accept the assignment through GitHub. Please make sure that each of your team members joins the
-team to which the instructor assigned them to work. Unless you provide the instructor with documentation of the
-extenuating circumstances that you are facing, not accepting the assignment means that you automatically receive a
-failing grade for it. Please see the course instructor with any questions.
+To access the laboratory assignment, you should go into the
+\channel{\#announcements} channel in our Slack team and find the announcement
+that provides a link for it. Now, make sure that the leader of your team also
+notes your team number and first copies this link and pastes it into their web
+browser. Next, the team leader (i.e., the first person in the group listing on
+Slack) will create their team with the name
+\command{``Allegheny-Computer-Science-100-Fall-2018/computer-science-100-fall-2018-lab-9-gkapfham}
+and then accept the laboratory assignment and see that GitHub Classroom created
+a new GitHub repository containing the starting materials and to store the
+completed version of your assignment. Unless you provide the instructor with
+documentation of the extenuating circumstances that you are facing, not
+accepting the assignment means that you automatically receive a failing grade
+for it. Please see the course instructor with any questions.
 
-Before you move to the next step of this assignment, please make sure that you read all of the content on the web site
-for your new GitHub repository, paying close attention to the technical details about the commands that you will type
-and the output that your program must produce. Now you are ready to download the starting materials to your laboratory
-computer. Click the ``Clone or download'' button and, after ensuring that you have selected ``Clone with SSH'', please
-copy this command to your clipboard. To enter the correct directory you should now type \command{cd cs111F2017}. Next,
-you can type the command \command{ls} and see that there are some files or directories inside of this directory. By
-typing \command{git clone} in your terminal and then pasting in the string that you copied from the GitHub site you will
-download all of the code for this assignment. For the previous example, a student would run a \command{git clone}
+% Note that the team leader will have to type their group and lab details into a
+% text field. For instance, if the team leader was in the second group then that
+% person would type ``Group 2 for Lab 9'' into the text field. At this point, each
+% additional member of the team can accept the assignment through GitHub. Please
+% make sure that each of your team members joins the team to which the instructor
+% assigned them to work.
+
+Before you move to the next step of this assignment, please make sure that you
+read all of the content on the web site for your new GitHub repository, paying
+close attention to the technical details about the commands that you will type
+and the output that your program must produce. Now you are ready to download the
+starting materials to your laboratory computer. Click the ``Clone or download''
+button and, after ensuring that you have selected ``Clone with SSH'', please
+copy this command to your clipboard. To enter the correct directory you should
+now type \command{cd cs100F2018}. Next, you can type the command \command{ls}
+and see that there are some files or directories inside of this directory. By
+typing \command{git clone} in your terminal and then pasting in the string that
+you copied from the GitHub site you will download all of the code for this
+assignment. For the previous example, a student would run a \command{git clone}
 command in the terminal in this fashion:
 
 \begin{lstlisting}
-  git clone git@github.com:Allegheny-Computer-Science-111-F2017/computer-science-111-fall-2017-lab-9-group-2-for-lab-9.git
+  git clone git@github.com:Allegheny-Computer-Science-100-F2018/computer-science-100-fall-2018-lab-7-gkapfham.git
 \end{lstlisting}
 
-After this command finishes, you can use \command{cd} to change into the new directory. If you want to \step{go back}
-one directory from your current location, then you can type the command \command{cd ..}. Please continue to use the
-\command{cd} and \command{ls} commands to explore the files that you automatically downloaded from GitHub. What files
-and directories do you see? What do you think is their purpose? Spend some time exploring, sharing your discoveries with
-a neighbor and a \mbox{teaching assistant}.
+After this command finishes, you can use \command{cd} to change into the new
+directory. If you want to \step{go back} one directory from your current
+location, then you can type the command \command{cd ..}. Please continue to use
+the \command{cd} and \command{ls} commands to explore the files that you
+automatically downloaded from GitHub. What files and directories do you see?
+What do you think is their purpose? Spend some time exploring, sharing your
+discoveries with a neighbor and a \mbox{teaching assistant}.
 
 \begin{figure}[tb]
   \begin{Verbatim}[commandchars=\\\{\}]
@@ -387,64 +405,103 @@ In conclusion, here are some points to remember when creating your program that 
 \begin{enumerate}
   \setlength{\itemsep}{0pt}
 
-\item The provide source code is incomplete---make sure that you add all of the needed features.
+\item Please think carefully about the role of the three Java classes provided
+  in your GitHub repository. To ensure that you add the correct functionality to
+  the appropriate Java class, you should draw a technical diagram to illustrate
+  the relationship between these classes.
 
-\item As in past assignments, your program only needs to have one {\tt main} method in one file.
+\item The provide source code is incomplete---make sure that you add all of the
+  needed features.
 
-\item Don't forget that you and your team member(s) should all contribute evenly by typing in text and using commands,
-  like \command{git push} and \command{git pull}, to transfer files to and from GitHub.
+\item As in past assignments, your program only needs to have one {\tt main}
+  method in one file.
+
+\item Don't forget to review the assignment sheets from the previous laboratory
+  and practical assignments as they contain insights that will support your
+  completion of this assignment.
+
+% Not going to have teamwork on this assignment. See earlier and later notes.
+
+% \item Don't forget that you and your team member(s) should all contribute
+  % evenly by typing in text and using commands, like \command{git push} and
+  % \command{git pull}, to transfer files to and from GitHub.
 
 \end{enumerate}
 
 \section*{Summary of the Required Deliverables}
 
-\noindent Students do not need to submit printed source code or technical writing for any assignment in this course.
-Instead, this assignment invites you to submit, using GitHub, the following deliverables.
+\noindent Students do not need to submit printed source code or technical
+writing for any assignment in this course. Instead, this assignment invites you
+to submit, using GitHub, the following deliverables.
 
 \begin{enumerate}
 
   \setlength{\itemsep}{0in}
 
-\item Stored in \reflection{}, a three-paragraph reflection on the commands that you typed in \command{gvim} and the
-  terminal window. This Markdown-based document should explain the input, output, and behavior of each command and the
-  challenges that you confronted when using it. For every challenge that you encountered, please explain your solution
-  for it. This document should also explain how your team collaborated to finish the assignment, with each team member
-  writing their own paragraph inside of this Markdown file.
+\item Stored in \reflection{}, a one-paragraph reflection on the commands that
+  you typed in a text editor and the terminal. This Markdown-based document
+  should explain the input, output, and behavior of each command and the
+  challenges that you confronted when using it. For every challenge that you
+  encountered, please explain your solution for it.
 
-\item A complete and correct version of \mainprogramsource{} that meets all of the set requirements and produces the
-  desired textual output in the terminal.
+\item A complete and correct version of \mainprogramsource{} that meets all of
+  the set requirements and produces the desired textual output in the terminal.
 
-\item A complete and correct version of \secondprogramsource{} that meets all of the set requirements and supports the
-  desired textual output in the terminal.
+\item A complete and correct version of \secondprogramsource{} that meets all of
+  the set requirements and supports the desired textual output in the terminal.
 
-\item A complete and correct version of \thirdprogramsource{} that meets all of the set requirements and supports the
-  desired textual output in the terminal.
+\item A complete and correct version of \thirdprogramsource{} that meets all of
+  the set requirements and supports the desired textual output in the terminal.
 
-\item A commit log in your GitHub repository that clearly shows that the team members effectively collaborated. That is,
-  the commit log should show that commits were evenly made by all team members; the photograph of each member should
-  appear in the commit log.
+% \item A commit log in your GitHub repository that clearly shows that the team
+%   members effectively collaborated. That is, the commit log should show that
+%   commits were evenly made by all team members; the photograph of each member
+%   should appear in the commit log.
 
 \end{enumerate}
 
 \section*{Evaluation of Your Laboratory Assignment}
 
-Using a report that the instructor shares with you through the commit log in GitHub, you will privately received a grade
-on this assignment and feedback on your submitted deliverables. Your grade for the assignment will be a function of the
-whether or not it was submitted in a timely fashion and if your program received a green \checkmark{} indicating that it
-met all of the requirements. Other factors will also influence your final grade on the assignment. In addition to
-studying the efficiency and effectiveness of your Java source code, the instructor will also evaluate the accuracy of
-both your technical writing and the comments in your source code. If your submission receives a red \naughtmark{}, the
-instructor will reduce your grade for the assignment while still considering the regularity with which you committed to
-your GitHub repository and the overall quality of your partially completed work. Please see the instructor if you have
-questions about the evaluation of this laboratory assignment.
+Using a report that the instructor shares with you through the commit log in
+GitHub, you will privately received a grade on this assignment and feedback on
+your submitted deliverables. Your grade for the assignment will be a function of
+the whether or not it was submitted in a timely fashion and if your program
+received a green \checkmark{} indicating that it met all of the requirements.
+Other factors will also influence your final grade on the assignment. In
+addition to studying the efficiency and effectiveness of your Java source code,
+the instructor will also evaluate the accuracy of both your technical writing
+and the comments in your source code. If your submission receives a red
+\naughtmark{}, the instructor will reduce your grade for the assignment while
+still considering the regularity with which you committed to your GitHub
+repository and the overall quality of your partially completed work. Please see
+the instructor if you have questions about the evaluation of this laboratory
+assignment.
 
-All team members will receive the same baseline grade for the laboratory assignment. If there are extenuating
-circumstances in which one or more of the team members do not effectively collaborate to complete this assignment, then
-the course instructor will adjust the grade of specific team members so that it is higher or lower than the baseline
-grade, as is fair and necessary. Please see the instructor if you do not understand how he assigns grades for
-collaborative assignments. Finally, in adherence to the Honor Code, students should only complete this assignment with
-their team members. Deliverables (e.g., Java source code or Markdown-based technical writing) that are nearly identical
-to the work of outsiders of your team will be taken as evidence of violating the \mbox{Honor Code}. Please see the
-course instructor with any questions about this assignment policy.
+It is understood that an important part of the learning process in any course,
+and particularly one in computer science, derives from thoughtful discussions
+with teachers and fellow students. Such dialogue is encouraged. However, it is
+necessary to distinguish carefully between the student who discusses the
+principles underlying a problem with others and the student who produces
+assignments that are identical to, or merely variations on, someone else's work.
+While it is acceptable for students in this class to discuss their programs,
+data sets, and reports with their classmates, deliverables that are nearly
+identical to the work of others will be taken as evidence of violating the
+\mbox{Honor Code}. You must uphold the Honor Code while completing this
+assignment. Students who do not understand how to adhere to the Honor Code
+should talk with the course instructor during office hours.
+
+
+% See note at the start of the file.
+% Remember that lab8 should also be a team-based
+% assignment once issues about group work are fully resolved
+
+% All team members will receive the same baseline grade for the laboratory assignment. If there are extenuating
+% circumstances in which one or more of the team members do not effectively collaborate to complete this assignment, then
+% the course instructor will adjust the grade of specific team members so that it is higher or lower than the baseline
+% grade, as is fair and necessary. Please see the instructor if you do not understand how he assigns grades for
+% collaborative assignments. Finally, in adherence to the Honor Code, students should only complete this assignment with
+% their team members. Deliverables (e.g., Java source code or Markdown-based technical writing) that are nearly identical
+% to the work of outsiders of your team will be taken as evidence of violating the \mbox{Honor Code}. Please see the
+% course instructor with any questions about this assignment policy.
 
 \end{document}
