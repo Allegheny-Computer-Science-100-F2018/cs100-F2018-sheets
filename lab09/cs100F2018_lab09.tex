@@ -10,10 +10,11 @@
 
 \newcommand{\labyear}{2018}
 \newcommand{\labday}{Tuesday}
+\newcommand{\labdueday}{Friday}
 \newcommand{\labtime}{2:30 pm}
 
 \newcommand{\assigneddate}{Assigned: \labday, \assignmentassignedate, \labyear{} at \labtime{}}
-\newcommand{\duedate}{Due: \labday, \assignmentduedate, \labyear{} at \labtime{}}
+\newcommand{\duedate}{Due: \labdueday, \assignmentduedate, \labyear{} at \labtime{}}
 
 % Edit these commands to give the name to the main program
 
@@ -34,8 +35,8 @@
 % Commands to describe key development tasks
 
 % --> Running gatorgrader.sh
-\newcommand{\gatorgraderstart}{\command{./gatorgrader.sh --start}}
-\newcommand{\gatorgradercheck}{\command{./gatorgrader.sh --check}}
+\newcommand{\gatorgraderstart}{\command{gradle grade}}
+\newcommand{\gatorgradercheck}{\command{gradle grade}}
 
 % --> Compiling and running program with gradle
 \newcommand{\gradlebuild}{\command{gradle build}}
@@ -200,18 +201,34 @@ todo list management tools are encouraged to review the web site
 \section*{Accessing the Laboratory Assignment on GitHub}
 
 To access the laboratory assignment, you should go into the
-\channel{\#announcements} channel in our Slack team and find the announcement
-that provides a link for it. Now, make sure that the leader of your team also
-notes your team number and first copies this link and pastes it into their web
-browser. Next, the team leader (i.e., the first person in the group listing on
-Slack) will create their team with the name
-\command{``Allegheny-Computer-Science-100-Fall-2018/computer-science-100-fall-2018-lab-9-gkapfham}
-and then accept the laboratory assignment and see that GitHub Classroom created
-a new GitHub repository containing the starting materials and to store the
-completed version of your assignment. Unless you provide the instructor with
-documentation of the extenuating circumstances that you are facing, not
-accepting the assignment means that you automatically receive a failing grade
-for it. Please see the course instructor with any questions.
+\channel{\#announcements} channel in our Slack workspace and find the
+announcement that provides a link for it. Copy this link and paste it into your
+web browser. Now, you should accept the laboratory assignment and see that
+GitHub Classroom created a new GitHub repository for you to access the
+assignment's starting materials and to store the completed version of your
+assignment. Specifically, to access your new GitHub repository for this
+assignment, please click the green ``Accept'' button and then click the link
+that is prefaced with the label ``Your assignment has been created here''. If
+you accepted the assignment and correctly followed these steps, you should have
+created a GitHub repository with a name like
+``Allegheny-Computer-Science-100-Fall-2018/computer-science-100-fall-2018-lab-8-gkapfham''.
+Unless you provide the instructor with documentation of the extenuating
+circumstances that you are facing, not accepting the assignment means that you
+automatically receive a failing grade for it.
+
+% To access the laboratory assignment, you should go into the
+% \channel{\#announcements} channel in our Slack team and find the announcement
+% that provides a link for it. Now, make sure that the leader of your team also
+% notes your team number and first copies this link and pastes it into their web
+% browser. Next, the team leader (i.e., the first person in the group listing on
+% Slack) will create their team with the name
+% \command{``Allegheny-Computer-Science-100-Fall-2018/computer-science-100-fall-2018-lab-9-gkapfham}
+% and then accept the laboratory assignment and see that GitHub Classroom created
+% a new GitHub repository containing the starting materials and to store the
+% completed version of your assignment. Unless you provide the instructor with
+% documentation of the extenuating circumstances that you are facing, not
+% accepting the assignment means that you automatically receive a failing grade
+% for it. Please see the course instructor with any questions.
 
 % Note that the team leader will have to type their group and lab details into a
 % text field. For instance, if the team leader was in the second group then that
@@ -283,11 +300,14 @@ discoveries with a neighbor and a \mbox{teaching assistant}.
 
 \section*{Collaboratively Implementing a List Management Tool}
 
-You and your group members should explore your repository by using a text editor to study the source code of the {\tt
-TodoListManager.java}, {\tt TodoListItem.java}, and {\tt TodoList.java} files. What methods do these classes provide?
-How do they work? Can you draw a picture that depicts the relationship between these three Java classes? Before you and
-your group members move onto the next step of this assignment, make sure that you understand what parts of the system
-are already implemented and what you have to extend and add in order to complete the assignment.
+You should explore your repository by using a text editor to study the source
+code of the {\tt TodoListManager.java}, {\tt TodoListItem.java}, and {\tt
+TodoList.java} files. What methods do these classes provide? How do they work?
+Can you draw a picture that depicts the relationship between these three Java
+classes? Before you move onto the next step of this assignment, please look for
+the \program{TODO} markers in the source code, making sure that you understand
+what parts of the system are already implemented and what you have to extend and
+add in order to complete the assignment.
 
 You will notice that this assignment organizes the methods into three separate classes, as you have seen in past
 assignments and in-class exercises. In particular, the {\tt TodoListManager} provides the user interface for our program
@@ -316,29 +336,38 @@ project!
 \end{verbatim}
 \vspace{-0.05in}
 
-As shown in Figure~\ref{fig:output}, the finished version of the {\tt TodoListManager} should provide features to read
-the todo list, search for specific tasks according to both priority and category, mark a task as done, and list all of
-the current tasks. Currently, the system does not include the source code to implement the priority-search and
-category-search features. Yet, you can see from the provided source code that the {\tt TodoListManager} can already read
-the todo list from the file, mark a task as done, list the existing tasks, and stop running the program. For this
-assignment, you must run the program by typing \command{gradle -q --console plain run}. Can you also build and run this
+As shown in Figure~\ref{fig:output}, the finished version of the {\tt
+TodoListManager} should provide features to read the todo list, search for
+specific tasks according to both priority and category, mark a task as done, and
+list all of the current tasks. Currently, the system does not include the source
+code to implement the priority-search and category-search features. Yet, you can
+see from the provided source code that the {\tt TodoListManager} can already
+read the todo list from the file, mark a task as done, list the existing tasks,
+and stop running the program. For this assignment, you must run the program by
+typing \command{gradle -q --console plain run}. Can you build and run this
 program?
 
-To complete this assignment, your team is responsible for adding all of the source code that is needed to implement the
-priority-search and category-search features. This means that you will first have to add code that can determine when
-the user has input the word ``{\tt priority-search}'' or ``{\tt category-search}''---what file should contain this code?
-Please notice that you will need to finish implementing the methods that perform these operations! Both of these
-operations will involve you using a {\tt java.util.Iterator} to iterate through all of the instances of the {\tt
-TodoItem} class.
+To complete this assignment, you are responsible for adding all of the source
+code that is needed to implement the priority-search and category-search
+features. This means that you will first have to add code that can determine
+when the user has input the word ``{\tt priority-search}'' or ``{\tt
+category-search}''---what file should contain this code? Please notice that you
+will need to finish implementing the methods that perform these operations! Both
+of these operations will involve you using a {\tt java.util.Iterator} to iterate
+through all of the instances of the {\tt TodoItem} class.
 
-When you are performing a priority-search, you will need to collect and return all of the {\tt TodoItem}s that match the
-provided priority level. For instance, using the example todo list above on this page, a request for the ``{\tt A}''
-priority tasks would return those with {\tt id} values of zero and one. Similarly, the use of the category-search
-operation will require you to iterate through all of the {\tt TodoItem}s managed by a {\tt TodoList} as you find those
-that match the requested category. For the aforementioned list and a search for the ``Explain'' category, the search
-would find only one task. The {\tt markTaskAsDone} method, as shown below, gives a concrete example of how to iterate
-through the {\tt todoItems} and use conditional logic to check if a specific {\tt todoItem} has the requested {\tt
-toMarkId}. You can use this method as an inspiration for those methods that you must implement.
+When you are performing a priority-search, you will need to collect and return
+all of the {\tt TodoItem}s that match the provided priority level. For instance,
+using the example todo list above on this page, a request for the ``{\tt A}''
+priority tasks would return those with {\tt id} values of zero and one.
+Similarly, the use of the category-search operation will require you to iterate
+through all of the {\tt TodoItem}s managed by a {\tt TodoList} as you find those
+that match the requested category. For the aforementioned list and a search for
+the ``Explain'' category, the search would find only one task. The {\tt
+  markTaskAsDone} method, as shown below, gives a concrete example of how to
+  iterate through the {\tt todoItems} and use conditional logic to check if a
+  specific {\tt todoItem} has the requested {\tt toMarkId}. You can use this
+  method as an inspiration for those methods that you must implement.
 
 \vspace{-0.05in}
 \begin{verbatim}
@@ -355,48 +384,68 @@ public void markTaskAsDone(int toMarkId) {
 
 \section*{Checking the Correctness of Your Program and Writing}
 
-As verified by Checkstyle and GatorGrader, the source code for all three of your files must adhere to all of the
-requirements in the Google Java Style Guide available at \url{https://google.github.io/styleguide/javaguide.html} and in
-the \readme{}. The Markdown file that contains your reflection must adhere to the standards described in the Markdown
-Syntax Guide \url{https://guides.github.com/features/mastering-markdown/}. Finally, your \reflection{} file should
-adhere to the Markdown standards established by the \step{Markdown linting} tool available at
-\url{https://github.com/markdownlint/markdownlint/} and the writing standards set by the \step{prose linting} tool from
-\url{http://proselint.com/}. Instead of requiring you to manually check that your deliverables adhere to these
-industry-accepted standards, the GatorGrader tool that you will use in this laboratory assignment makes it easy for you
-to automatically check if your submission meets these well-established standards for correctness. Please see the
+As verified by Checkstyle and GatorGrader, the source code for all three of your
+files must adhere to all of the requirements in the Google Java Style Guide
+available at \url{https://google.github.io/styleguide/javaguide.html} and in the
+\readme{}. The Markdown file that contains your reflection must adhere to the
+standards described in the Markdown Syntax Guide
+\url{https://guides.github.com/features/mastering-markdown/}. Finally, your
+\reflection{} file should adhere to the Markdown standards established by the
+\step{Markdown linting} tool available at
+\url{https://github.com/markdownlint/markdownlint/} and the writing standards
+set by the \step{prose linting} tool from \url{http://proselint.com/}. Instead
+of requiring you to manually check that your deliverables adhere to these
+industry-accepted standards, the GatorGrader and Gradle tools that you use in
+this assignment makes it easy for you to automatically check if your submission
+meets these well-established standards for correctness. Please see the
 instructor if you have questions about GatorGrader.
 
-Since this is not your first laboratory assignment, you will notice that some of the provided source code does not
-contain all of the required comments. This means that you will have to inspect the source code from previous laboratory
-and practical assignments to review how to create the comments in the files. Moreover, the provided source code is
-missing many of the lines that are needed to pass the GatorGrader checks. Make sure that you review the requirements for
-these Java source code files, as outlined in this section and the previous one. You can also study the source code of
-all three of the Java files to learn more about what you need to add to them. Don't forget to look in your team's GitHub
-repository to learn about GatorGrader's checks!
+Since this is not your first laboratory assignment, you will notice that some of
+the provided source code does not contain all of the required comments. This
+means that you will have to inspect the source code from previous laboratory and
+practical assignments to review how to create the comments in the files.
+Moreover, the provided source code is missing many of the lines that are needed
+to pass the GatorGrader checks. Make sure that you review the requirements for
+these Java source code files, as outlined in this section and the previous one.
+You can also study the source code of all three of the Java files to learn more
+about what you need to add to them. For instance, you will need to both add the
+implementation of a method and the source code that calls the method. Don't
+forget to look in your GitHub repository to learn about GatorGrader's checks!
 
-To get started with the use of GatorGrader, type the command \gatorgraderstart{} in your terminal window. Once this step
-completes you can type \gatorgradercheck{}. If your work does not meet all of the assignment's requirements, then you
-will see the following output in your terminal: \command{Overall, are there any mistakes in the assignment? Yes}. If you
-do have mistakes in your assignment, then you will need to review GatorGrader's output, find the mistake, and try to fix
-it. Once your program is building correctly, fulfilling at least some of the assignment's requirements, you should
-transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands. For example, if you want to signal that
-the \mainprogramsource{} file has been changed and is ready for transfer to GitHub you would first type
-\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{}, and then checking to see that the transfer to
-GitHub is successful. Remember, to correctly complete this assignment you need to commit all code and writing files to
-GitHub. Also, all of the team members should regularly practice interacting with GitHub. If you notice that the network
-communication with GitHub did not work, then please try to determine why, asking a teaching assistant or the course
-instructor for additional assistance.
+To get started with the use of GatorGrader, type the command \gatorgraderstart{}
+in your terminal. If your laboratory work does not meet all of the assignment's
+requirements, then you will see a summary of the failing checks along with a
+statement giving the percentage of checks that are currently passing. If you do
+have mistakes in your assignment, then you will need to review GatorGrader's
+output, find the mistake, and try to fix it. Once your program is building
+correctly, fulfilling at least some of the assignment's requirements, you should
+transfer your files to GitHub using the \gitcommit{} and \gitpush{} commands.
+For example, if you want to signal that the \mainprogramsource{} file has been
+changed and is ready for transfer to GitHub you would first type
+\gitcommitmainprogram{} in your terminal, followed by typing \gitpush{} and then
+checking to see that the transfer to GitHub was successful. Make sure that you
+transfer your source code and technical writing to GitHub, as the instructor
+cannot access your deliverables unless you run the \gitpush{} command. Don't
+forget that there are three Java source code files for this laboratory
+assignment and, along with your technical writing, you must commit and push all
+of them to GitHub! Please see the instructor or a teaching assistant if you
+cannot upload your deliverables.
 
-After the course instructor enables \step{continuous integration} with a system called Travis CI, when you use the
-\gitpush{} command to transfer your source code to your GitHub repository, Travis CI will initialize a \step{build} of
-your assignment, checking to see if it meets all of the requirements. If both your source code and writing meet all of
-the established requirements, then you will see a green \checkmark{} in the listing of commits in GitHub after awhile.
-If your submission does not meet the requirements, a red \naughtmark{} will appear instead. The instructor will reduce a
-student's grade for this assignment if the red \naughtmark{} appears on the last commit in GitHub immediately before the
-assignment's due date. Yet, if the green \checkmark{} appears on the last commit in your GitHub repository, then you
-satisfied all of the main checks, thereby allowing the course instructor to evaluate other aspects of your source code
-and writing, as further described in the \step{Evaluation} section of this assignment sheet. Unless you provide the
-instructor with documentation of the extenuating circumstances that you are facing, no late work will be considered
+After the course instructor enables \step{continuous integration} with a system
+called Travis CI, when you use the \gitpush{} command to transfer your source
+code to your GitHub repository, Travis CI will initialize a \step{build} of your
+assignment, checking to see if it meets all of the requirements. If both your
+source code and writing meet all of the established requirements, then you will
+see a green \checkmark{} in the listing of commits in GitHub after awhile. If
+your submission does not meet the requirements, a red \naughtmark{} will appear
+instead. The instructor will reduce a student's grade for this assignment if the
+red \naughtmark{} appears on the last commit in GitHub immediately before the
+assignment's due date. Yet, if the green \checkmark{} appears on the last commit
+in your GitHub repository, then you satisfied all of the main checks, thereby
+allowing the course instructor to evaluate other aspects of your source code and
+writing, as further described in the \step{Evaluation} section of this
+assignment sheet. Unless you provide the instructor with documentation of the
+extenuating circumstances that you are facing, no late work will be considered
 towards your grade for this laboratory assignment.
 
 \noindent
@@ -415,6 +464,9 @@ In conclusion, here are some points to remember when creating your program that 
 
 \item As in past assignments, your program only needs to have one {\tt main}
   method in one file.
+
+\item Make sure that you know which of your Java classes needs to contain {\tt
+  println} statements.
 
 \item Don't forget to review the assignment sheets from the previous laboratory
   and practical assignments as they contain insights that will support your
@@ -489,7 +541,6 @@ identical to the work of others will be taken as evidence of violating the
 \mbox{Honor Code}. You must uphold the Honor Code while completing this
 assignment. Students who do not understand how to adhere to the Honor Code
 should talk with the course instructor during office hours.
-
 
 % See note at the start of the file.
 % Remember that lab8 should also be a team-based
