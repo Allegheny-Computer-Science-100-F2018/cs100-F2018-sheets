@@ -25,6 +25,7 @@ script:
 - latexmk -xelatex -pdf -outdir=_build lab07/cs100F2018_lab07.tex
 - latexmk -xelatex -pdf -outdir=_build lab08/cs100F2018_lab08.tex
 - latexmk -xelatex -pdf -outdir=_build lab09/cs100F2018_lab09.tex
+- latexmk -xelatex -pdf -outdir=_build lab10/cs100F2018_lab10.tex
 - latexmk -xelatex -pdf -outdir=_build practical01/cs100F2018_practical01.tex
 - latexmk -xelatex -pdf -outdir=_build practical02/cs100F2018_practical02.tex
 - latexmk -xelatex -pdf -outdir=_build practical03/cs100F2018_practical03.tex
@@ -50,6 +51,7 @@ deploy:
     - _build/cs100F2018_lab07.pdf
     - _build/cs100F2018_lab08.pdf
     - _build/cs100F2018_lab09.pdf
+    - _build/cs100F2018_lab10.pdf
     - _build/cs100F2018_practical01.pdf
     - _build/cs100F2018_practical02.pdf
     - _build/cs100F2018_practical03.pdf
