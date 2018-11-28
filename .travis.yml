@@ -60,8 +60,8 @@ deploy:
     - _build/cs100F2018_practical05.pdf
     - _build/cs100F2018_practical06.pdf
     - _build/cs100F2018_studyguide_quiz01.pdf
+    - _build/cs100F2018_studyguide_quiz02.pdf
     - _build/cs100F2018_studyguide_exam01.pdf
-    - _build/cs100F2018_studyguide_exam02.pdf
   skip_cleanup: true
   on:
     tags: true
