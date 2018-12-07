@@ -33,6 +33,7 @@ script:
 - latexmk -xelatex -pdf -outdir=_build practical05/cs100F2018_practical05.tex
 - latexmk -xelatex -pdf -outdir=_build practical06/cs100F2018_practical06.tex
 - latexmk -xelatex -pdf -outdir=_build practical07/cs100F2018_practical07.tex
+- latexmk -xelatex -pdf -outdir=_build practical08/cs100F2018_practical08.tex
 - latexmk -pdf -outdir=_build quiz01/cs100F2018_studyguide_quiz01.tex
 - latexmk -pdf -outdir=_build quiz02/cs100F2018_studyguide_quiz02.tex
 - latexmk -pdf -outdir=_build exam01/cs100F2018_studyguide_exam01.tex
@@ -61,6 +62,7 @@ deploy:
     - _build/cs100F2018_practical05.pdf
     - _build/cs100F2018_practical06.pdf
     - _build/cs100F2018_practical07.pdf
+    - _build/cs100F2018_practical08.pdf
     - _build/cs100F2018_studyguide_quiz01.pdf
     - _build/cs100F2018_studyguide_quiz02.pdf
     - _build/cs100F2018_studyguide_exam01.pdf
